@@ -1,0 +1,29 @@
+Started GET "/" for ::1 at 2019-11-04 17:13:54 -0800
+
+PG::ConnectionBad - FATAL:  database "boneappletea_development" does not exist
+:
+
+Started POST "/__better_errors/6bef40db1ac5a24c/variables" for ::1 at 2019-11-04 17:13:55 -0800
+  [1m[35m (473.1ms)[0m  [1m[35mCREATE DATABASE "boneappletea_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (421.0ms)[0m  [1m[35mCREATE DATABASE "boneappletea_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE DATABASE "boneappletea_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "boneappletea_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (200.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "boneappletea_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (193.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "boneappletea_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (402.6ms)[0m  [1m[35mCREATE DATABASE "boneappletea_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (389.7ms)[0m  [1m[35mCREATE DATABASE "boneappletea_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-11-04 17:24:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1216ms (Views: 1213.9ms | ActiveRecord: 0.0ms)
+
+
