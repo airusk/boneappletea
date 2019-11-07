@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import CloseSVG from '../icons/close_icon';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -11,9 +12,6 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount(){
-    this.props.clearErrors();
-  }
 
   handleInput(type) {
     return (e) => {
@@ -29,7 +27,7 @@ class SessionForm extends React.Component {
   renderErrors() {
     return (
       <ul>{this.props.errors.map((error, i) => (
-        <li key={i}>{error}</li>
+        <li key={i}>- {error}</li>
       ))}
       </ul>
     );
@@ -39,42 +37,58 @@ class SessionForm extends React.Component {
     const { formType } = this.props;
     const properForm = (formType === 'Login') ? 
     (
-      <div className="session-form">
-        <div onClick={this.props.closeModal} className="close-x">X</div>
-        {this.renderErrors()}
-        <h2>{formType} Here!</h2>
-        <form>
-          <label> Email:
-            <input type="text" value={this.state.email} onChange={this.handleInput('email')} />
+      <div className="form login">
+        <a onClick={this.props.closeModal}><CloseSVG/></a>
+        <img src="/assets/src/logo2.png" className="logo"/>
+        <p className="messages">Please sign in to your account.</p>
+        <br/>
+        <form className="fields">
+          <label id="email">
+            <input type="text" value={this.state.email} onChange={this.handleInput('email')} placeholder="E-MAIL ADDRESS"/>
           </label>
-          <br />
-          <label> Password:
-            <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
+          <br/>
+          <label id="password">
+            <input type="password" value={this.state.password} onChange={this.handleInput('password')} placeholder="PASSWORD"/>
           </label>
-          <button onClick={this.handleSubmit}>{formType}</button>
+          <br/>
+          <div className="messages">
+            {this.renderErrors()}
+          </div>
+          <br/>
+          <button className="submit" onClick={this.handleSubmit}>SIGN IN</button>
+
         </form>
-        Are you new here? {this.props.otherForm} here
+        <br/>
+        <p className="messages">Don't have a login? {this.props.otherForm}</p>
       </div>
     ) :
     (
-        <div className="session-form">
-          <div onClick={this.props.closeModal} className="close-x">X</div>
-          {this.renderErrors()}
-          <h2>{formType} Here!</h2>
-          <form>
-            <label> Name:
-            <input type="text" value={this.state.name} onChange={this.handleInput('name')} />
+        <div className="form signup">
+          <a onClick={this.props.closeModal}><CloseSVG /></a>
+          <img src="/assets/src/logo2.png" className="logo" />
+          <p className="messages">Please complete the form to register. Password must be atleast 6 characters.</p>
+          <br/>
+          <form className="fields">
+            <label id="name">
+            <input type="text" value={this.state.name} onChange={this.handleInput('name')} placeholder="NAME" />
             </label>
-            <label> Email:
-            <input type="text" value={this.state.email} onChange={this.handleInput('email')} />
+            <br/>
+            <label id="email">
+              <input type="text" value={this.state.email} onChange={this.handleInput('email')} placeholder="EMAIL" />
             </label>
+            <br/>
+            <label id="password">
+            <input type="password" value={this.state.password} onChange={this.handleInput('password')} placeholder="PASSWORD" />
+            </label>
+            <br/>
+            <div className="messages">
+              {this.renderErrors()}
+            </div>
             <br />
-            <label> Password:
-            <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
-            </label>
-            <button onClick={this.handleSubmit}>{formType}</button>
+            <button className="submit" onClick={this.handleSubmit}>REGISTER</button>
+            <br/>
           </form>
-          Already a member? {this.props.otherForm} instead
+          <p className="messages">Already a registered? {this.props.otherForm}</p>
         </div>
     )
     return properForm;

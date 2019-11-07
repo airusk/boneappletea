@@ -15,17 +15,21 @@ class Greeting extends React.Component {
   render() {
 
     const sessionLinks = () => (
-      <nav className="login-signup">
-        <button onClick={() => this.props.openModal('login')}>Login</button>
-        &nbsp;or&nbsp;
-      <button onClick={() => this.props.openModal('signup')}>Signup</button>
+      <nav className="navigation-bar">
+        <Link to="/" className="logo">
+          <img src="/assets/src/logo.png"/>
+        </Link>
+        <div className="link-sessions">
+          <a onClick={() => this.props.openModal('login')}>LOGIN</a>
+          <a onClick={() => this.props.openModal('signup')}>SIGNUP</a>
+        </div>
       </nav>
     );
 
     const greeting = this.props.user ?
       (
         <div>
-          <h4>Welcome, {this.props.user.name}!</h4>
+          {/* <h4>Welcome, {this.props.user.name}!</h4> */}
           <button onClick={this.handleClick}>Log Out</button>
         </div>
       ) : (

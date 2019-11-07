@@ -1,0 +1,67 @@
+.form{
+  padding: 30px;
+}
+
+.form.login{
+  display: block;
+  width: 480px;
+  height: 410px;
+}
+
+.form.signup{
+  display: block;
+  width: 480px;
+  height: 490px;
+}
+
+.form .logo{
+  width:470px;
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+
+.form a{
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.form .messages{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.form .submit{
+  background-color: #333333;
+  font-family: 'Josefin Sans', sans-serif;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  height: 45px;
+  letter-spacing: 1.68px;
+  line-height: 30px;
+  width: 100%;
+}
+
+.form .submit:hover{
+  background-color: #4d4d4d;
+}
+
+.form input{
+  border: 1px solid #c5c3c6;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 16px;
+  height: 45px;
+  line-height: 18px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.form .fields{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
