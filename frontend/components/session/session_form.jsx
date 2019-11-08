@@ -6,11 +6,48 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      name:"",
       email: "",
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
+
+  handleDemoLogin(e){
+    e.preventDefault();
+    let email = "pizzalover@ba.com".split("");
+    let password = "pepperoni".split("");
+    this.setState({email:"",password:""},()=>this.demoLogin(email,password));
+  }
+
+  demoLogin(email, password, time = 250){
+    if (email.length != 0){
+      if (email.length === 15) time = 50
+      if (email.length === 8) time = 300
+      if (email.length === 7) time = 75
+      if (email.length === 4) time = 200
+      if (email.length === 3) time = 75
+      const nextChar = email.shift();
+      this.setState({
+        email: this.state.email + nextChar
+      },()=>setTimeout(
+        ()=>this.demoLogin(email,password, time),time)
+      );
+    }else if(password.length != 0){
+      const nextChar = password.shift();
+      this.setState({
+        password: this.state.password + nextChar
+      }, () => setTimeout(
+        () => this.demoLogin(email, password, time),time)
+      );
+    }else{
+      const user = Object.assign({}, this.state);
+      this.props.processForm(user).then(this.props.closeModal);
+    }
+  }
+
 
 
   handleInput(type) {
@@ -20,6 +57,7 @@ class SessionForm extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
   }
@@ -56,10 +94,9 @@ class SessionForm extends React.Component {
           </div>
           <br/>
           <button className="submit" onClick={this.handleSubmit}>SIGN IN</button>
-
         </form>
         <br/>
-        <p className="messages">Don't have a login? {this.props.otherForm}</p>
+          <p className="messages">Don't have a login? {this.props.otherForm} or sign in with a <a onClick={this.handleDemoLogin}>demo user</a> .</p>
       </div>
     ) :
     (

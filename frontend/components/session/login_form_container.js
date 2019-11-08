@@ -16,7 +16,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
       dispatch(clearErrors())
       dispatch(openModal('signup'))}}
     >
-      Register now.
+      Register now
     </a>
   ),
   closeModal: () => {
