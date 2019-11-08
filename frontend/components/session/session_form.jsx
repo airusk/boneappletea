@@ -39,7 +39,7 @@ class SessionForm extends React.Component {
     (
       <div className="form login">
         <a onClick={this.props.closeModal}><CloseSVG/></a>
-        <img src="/assets/src/logo2.png" className="logo"/>
+        <img src={window.logo2URL} className="logo"/>
         <p className="messages">Please sign in to your account.</p>
         <br/>
         <form className="fields">
