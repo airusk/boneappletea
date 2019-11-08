@@ -30,7 +30,7 @@ class NavigationBar extends React.Component {
       <nav className="navigation-bar">
         <a className="bars"><BarsSVG/></a>
         <Link to="/" className="logo">
-          <img src="/assets/src/logo.png" />
+          <img src={window.logoURL} />
         </Link>
         {sessionLinks}
         <a className="search"><SearchSVG/></a>

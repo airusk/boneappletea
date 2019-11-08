@@ -4,9 +4,13 @@
     <title>boneappletéa</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Libre+Baskerville&display=swap" rel="stylesheet">
-
+    <script type="text/javascript">
+      window.logoURL = "<%= image_url('src/logo.png')%>"
+    </script>
+    <script type="text/javascript">
+      window.logo2URL = "<%= image_url('src/logo2.png')%>"
+    </script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>

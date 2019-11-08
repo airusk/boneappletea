@@ -65,7 +65,7 @@ class SessionForm extends React.Component {
     (
         <div className="form signup">
           <a onClick={this.props.closeModal}><CloseSVG /></a>
-          <img src="/assets/src/logo2.png" className="logo" />
+          <img src={window.logo2URL} className="logo" />
           <p className="messages">Please complete the form to register. Password must be atleast 6 characters.</p>
           <br/>
           <form className="fields">
