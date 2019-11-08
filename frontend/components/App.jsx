@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Modal from './modal/modal';
-import GreetingContainer from './greeting/greeting_container';
+import NavigationContainer from './navigation_bar/navigation_container';
 import HomepageContainer from './home/homepage_container';
 // import LoginFormContainer from "./session/login_form_container";
 // import SignupFormContainer from "./session/signup_form_container";
@@ -13,7 +13,7 @@ const App = () => (
   <div>
     <Modal/>
     <header>
-      <GreetingContainer/>
+      <NavigationContainer/>
     </header>
     <Switch>
       <Route exact path="/" component={HomepageContainer} />
