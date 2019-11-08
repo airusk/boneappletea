@@ -28,12 +28,12 @@ class NavigationBar extends React.Component {
       );
     const nav_bar = (
       <nav className="navigation-bar">
-        <div className="bars"><BarsSVG/></div>
+        <div className="bars"><BarsSVG width="22"/></div>
         <Link to="/" className="logo">
           <img src={window.logoURL} />
         </Link>
         {sessionLinks}
-        <div className="search"><SearchSVG/></div>
+        <div className="search"><SearchSVG width="22"/></div>
       </nav>
     )
     return (
