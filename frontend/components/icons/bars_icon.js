@@ -2,7 +2,7 @@
 import React from "react";
 
 const BarsSVG = ({
-  fill = "#000000", width = "26", className = "icon close", focusable = "false", viewBox = "0 0 448 512", ariaHidden = "true" }) => (
+  fill = "#FFFFFF", width = "26", className = "icon bars", focusable = "false", viewBox = "0 0 448 512", ariaHidden = "true" }) => (
     <svg
       width={width}
       className={className}

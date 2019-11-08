@@ -42,8 +42,22 @@
 
 .navigation-bar .link-sessions{
   position: relative;
-  left: 81%;
+  left: 77%;
   display:flex;
   justify-content: space-around;
   width: 150px;
+}
+
+.navigation-bar .bars{
+  position: relative;
+  left: .5%;
+}
+
+.navigation-bar .bars:hover{
+  background-color: #2e2e2e;
+}
+
+.navigation-bar .search{
+  position: relative;
+  left: 76%;
 }
