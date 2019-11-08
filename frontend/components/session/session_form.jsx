@@ -23,12 +23,27 @@ class SessionForm extends React.Component {
   }
 
   demoLogin(email, password, time = 250){
+    //hardcoded on 10 characters before '@ba.com'
     if (email.length != 0){
-      if (email.length === 15) time = 50
-      if (email.length === 8) time = 300
-      if (email.length === 7) time = 75
-      if (email.length === 4) time = 200
-      if (email.length === 3) time = 75
+      switch(email.length){
+        case (15): 
+          time = 50;
+          break;
+        case (8):
+          time = 300;
+          break;
+        case (7):
+          time = 75;
+          break;
+        case(4):
+          time = 200;
+          break;
+        case (3):
+          time = 75;
+          break;
+        default:
+          time = time;
+      }
       const nextChar = email.shift();
       this.setState({
         email: this.state.email + nextChar
@@ -89,7 +104,7 @@ class SessionForm extends React.Component {
             <input type="password" value={this.state.password} onChange={this.handleInput('password')} placeholder="PASSWORD"/>
           </label>
           <br/>
-          <div className="messages">
+          <div className="messages errors">
             {this.renderErrors()}
           </div>
           <br/>
@@ -118,7 +133,7 @@ class SessionForm extends React.Component {
             <input type="password" value={this.state.password} onChange={this.handleInput('password')} placeholder="PASSWORD" />
             </label>
             <br/>
-            <div className="messages">
+            <div className="messages errors">
               {this.renderErrors()}
             </div>
             <br />
