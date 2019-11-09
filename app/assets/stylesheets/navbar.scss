@@ -4,8 +4,8 @@
   top: 0;
   height: 50px;
   width: 100%;
-  display: flex;
-  align-items: center;
+  display: block;
+  // align-items: center;
 }
 
 .nav-content{
@@ -28,12 +28,12 @@
 }
 
 .navigation-bar .logo{
-  position: relative;
+  padding: .75rem 1rem .25rem 1rem ;
+  position: fixed;
   left: 45%;
 }
 .logo img{
   width: 160px;
-  padding-top:5px;
 }
 
 .navigation-bar .logo:hover{
@@ -41,17 +41,23 @@
 }
 
 .navigation-bar .link-sessions{
-  position: relative;
-  left: 77%;
+  position: fixed;
+  left: 87%;
   display:flex;
   justify-content: space-around;
   width: 150px;
+  height: 1rem;
+  padding: 1.25rem 1rem .75rem 1rem;
 }
 
 .navigation-bar .bars{
   cursor: pointer;
-  position: relative;
-  left: .5%;
+  position: fixed;
+  width: 1rem;
+  height: 1rem;
+  top: 0;
+  left: 0;
+  padding: 1rem;
 }
 
 .navigation-bar .bars:hover{
@@ -61,6 +67,22 @@
 
 .navigation-bar .search{
   cursor: pointer;
-  position: relative;
-  left: 76.5%
+  position: fixed;
+  width: 1rem;
+  height: 1rem;
+  right: 0;
+  top: 0;
+  padding: 1rem;
 }
+
+.navigation-bar .search:hover{
+  display: block;
+  background-color: #2e2e2e;
+}
+
+@media screen and (max-width: 1100px){
+  .navigation-bar .link-sessions{
+    display:none;
+  }
+}
+
