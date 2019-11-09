@@ -1,0 +1,1 @@
+json.extract! recipe, :id, :title, :body, :user_id
