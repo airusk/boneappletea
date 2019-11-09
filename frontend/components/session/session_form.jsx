@@ -17,29 +17,29 @@ class SessionForm extends React.Component {
 
   handleDemoLogin(e){
     e.preventDefault();
-    let email = "pizzalover@ba.com".split("");
+    let email = "pizzalover@bat.com".split("");
     let password = "pepperoni".split("");
     this.setState({email:"",password:""},()=>this.demoLogin(email,password));
   }
 
-  demoLogin(email, password, time = 250){
+  demoLogin(email, password, time = 100){
     //hardcoded on 10 characters before '@ba.com'
     if (email.length != 0){
       switch(email.length){
-        case (15): 
+        case (16): 
           time = 50;
           break;
         case (8):
-          time = 300;
+          time = 250;
           break;
         case (7):
-          time = 75;
+          time = 50;
           break;
-        case(4):
-          time = 200;
+        case(5):
+          time = 250;
           break;
         case (3):
-          time = 75;
+          time = 50;
           break;
         default:
           time = time;
@@ -72,7 +72,7 @@ class SessionForm extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    debugger
+    // debugger
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
   }

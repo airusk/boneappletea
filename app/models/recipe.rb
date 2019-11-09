@@ -16,4 +16,8 @@ class Recipe < ApplicationRecord
   belongs_to :user
   has_many :ingredients
   has_many :steps
+
+  def rating
+    # Method to create recipe rating through comment ratings.
+  end
 end
