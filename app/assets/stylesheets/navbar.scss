@@ -4,14 +4,15 @@
   top: 0;
   height: 50px;
   width: 100%;
-  display: block;
-  // align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // margin: 0 auto;
 }
 
 .nav-content{
   height: 100%;
   width: 100%;
-  // display:flexbox
 }
 
 .navigation-bar a{
@@ -29,8 +30,7 @@
 
 .navigation-bar .logo{
   padding: .75rem 1rem .25rem 1rem ;
-  position: fixed;
-  left: 45%;
+  align-content: center;
 }
 .logo img{
   width: 160px;
