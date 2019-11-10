@@ -14,6 +14,7 @@ const receiveRecipe = recipe => ({
 });
 
 export const fetchRecipes = () => dispatch => {
+  debugger
   return RecipeApiUtil.fetchRecipes()
     .then(recipes => dispatch(receiveRecipes(recipes)));
 }
