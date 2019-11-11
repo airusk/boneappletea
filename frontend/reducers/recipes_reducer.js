@@ -6,7 +6,6 @@ import {
 const recipesReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   let nextState = Object.assign({},oldState);
-  // debugger
   switch(action.type){
     case RECEIVE_ALL_RECIPES:
       return action.recipes;
