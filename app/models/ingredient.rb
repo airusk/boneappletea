@@ -12,5 +12,6 @@
 
 class Ingredient < ApplicationRecord
   validates :text, :recipe_id, :ord, presence: true
+  validates :ord, uniqueness: { scope: :recipe_id }
   belongs_to :recipe
 end

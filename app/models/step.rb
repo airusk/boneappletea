@@ -12,6 +12,7 @@
 
 class Step < ApplicationRecord
   validates :body, :recipe_id, :ord, presence: true
+  validates :ord, uniqueness: { scope: :recipe_id }
 
   belongs_to :recipe
 end

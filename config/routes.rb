@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resources :recipes, only: [:index, :show]
     #nest comments under recipes
     resources :ingredients, only: [:index]
+    resources :steps, only: [:index]
   end
 end
