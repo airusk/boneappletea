@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :recipes, only: [:index, :show]
     #nest comments under recipes
+    resources :ingredients, only: [:index]
   end
 end
