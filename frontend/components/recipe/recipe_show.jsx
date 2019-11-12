@@ -6,8 +6,8 @@ class RecipeShow extends React.Component{
 
   componentDidMount(){
     this.props.fetchRecipe(this.props.match.params.recipeId);
-    this.props.fetchIngredients();
-    this.props.fetchSteps();
+    // this.props.fetchIngredients();
+    // this.props.fetchSteps();
   }
   render(){
     const { recipe, ingredients, steps } = this.props;
@@ -29,9 +29,6 @@ class RecipeShow extends React.Component{
           </div>
         </div>
         <div className="main-image">
-          PIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZA
-          PIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZA
-          PIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZA
           PIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZA
           PIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZA
           PIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZAPIZZA

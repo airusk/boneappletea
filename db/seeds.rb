@@ -54,6 +54,16 @@ Ingredient.create(
   recipe_id: 1, 
   ord: 5
 )
+Ingredient.create(
+  text: "1 baby-handfull of olives", 
+  recipe_id: 1, 
+  ord: 6
+)
+Ingredient.create(
+  text: "8 crack open a cold one", 
+  recipe_id: 2, 
+  ord: 1
+)
 
 # STEP SEEDS
 Step.create(
@@ -85,4 +95,9 @@ Step.create(
   body:"Bake on top rack until crust is golden brown and crisp, 10–12 minutes. Let pizza cool 1 minute, then top with carrot tops, basil, mint, pea shoots and/or blue basil. Serve immediately.",
   recipe_id: 1,
   ord: 6
+)
+Step.create(
+  body:"A step that doesn't belong to recipeId 1.",
+  recipe_id: 2,
+  ord: 420
 )

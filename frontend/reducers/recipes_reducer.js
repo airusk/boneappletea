@@ -8,10 +8,9 @@ const recipesReducer = (oldState = {}, action) => {
   let nextState = Object.assign({},oldState);
   switch(action.type){
     case RECEIVE_ALL_RECIPES:
-      return action.recipes;
+      return action.payload.recipes;
     case RECEIVE_RECIPE:
-      nextState[action.recipe.id] = action.recipe;
-      return nextState;
+      return Object.assign(nextState, action.payload.recipe);
     default:
       return oldState;
   }

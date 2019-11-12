@@ -8,7 +8,7 @@ const entitiesReducer = combineReducers({
   users: usersReducer,
   recipes: recipesReducer,
   ingredients: ingredientsReducer,
-  steps: stepsReducer
+  steps: stepsReducer,
 });
 
 export default entitiesReducer;
