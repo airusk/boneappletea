@@ -1,3 +1,44 @@
 // Place all the styles related to the api/Ingredients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.ingredients-container{
+  padding-top: 30px;
+  border-bottom: 5px solid #000;
+  margin-bottom: 30px;
+}
+
+.ingredients-list{
+  padding: 30px 0 30px;
+}
+
+.ingredients-list h3{
+
+}
+
+.ingredient-item .checkbox{
+  float: left;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  margin-right: 20px;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.ingredient-item input[type=checkbox]:checked {
+  background-color: #000;
+  background-image: image-url('src/checkmark.svg');
+  background-repeat: no-repeat;
+}
+
+.ingredient-item{
+  list-style-type: none;
+  padding-bottom: 12px;
+  margin-left: 35px;
+  font-family: 'futura-pt',sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: .5px;
+}

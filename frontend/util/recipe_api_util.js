@@ -1,13 +1,3 @@
-// export const fetchRecipes = () => (
-//   $.ajax({
-//     url: 'api/recipes',
-//     method: 'GET'
-//   })
-// )
-// 
-// 
-
-
 export const fetchPayload = () => (
   $.ajax({
     url: 'api/recipes'

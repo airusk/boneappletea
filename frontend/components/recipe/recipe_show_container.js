@@ -3,7 +3,6 @@ import { fetchRecipe } from '../../actions/recipe_actions';
 import RecipeShow from './recipe_show';
 
 const filterEntities = (recipeComponents, recipeId) => {
-  debugger
   let filteredComponents = [];
   for (const componentId in recipeComponents){
     if (recipeComponents[componentId]["recipeId"] === parseInt(recipeId)){

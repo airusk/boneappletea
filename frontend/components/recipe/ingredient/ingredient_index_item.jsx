@@ -3,7 +3,7 @@ import React from 'react';
 const IngredientIndexItem = props => (
   <li className="ingredient-item">
     <label>
-      <input type="checkbox" value={props.ingredient.id}/>
+      <input type="checkbox" value="on" className="checkbox"/>
       {props.ingredient.text}
     </label>
   </li>
