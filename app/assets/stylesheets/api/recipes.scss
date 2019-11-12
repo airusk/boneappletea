@@ -1,12 +1,15 @@
 // Place all the styles related to the api/Recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.recipe-show{
-  margin-top: 50px;
+.recipe-page{
+  padding-top: 50px;
 }
 
-.recipe-show .title{
+.recipe-head-container{
+  border-bottom: 5px solid #000;
+}
+
+.recipe-head-container .title{
   font-family: 'futura-pt',sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -16,7 +19,7 @@
   letter-spacing: 1.3px;
 }
 
-.recipe-show .subheading{
+.recipe-head-container .subheading{
   font-family: 'futura-pt',sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -27,8 +30,12 @@
   text-align: center;
 }
 
+.recipe-header{
+  padding: 30px 0 30px;
+}
+
 @media screen and (min-width: 1024px){
-  .recipe-show .rating{
+  .recipe-head-container .rating{
     position: relative;
     margin-right: 2.5rem;
     margin-bottom: 0;
@@ -36,20 +43,19 @@
   }
 }
 
-.recipe-show .body{
+.recipe-head-container .body{
   font-family: 'Radley', Georgia, Cambria, Times New Roman, Times, serif;
 }
 
-.post-head-container{
+.recipe-head-container{
   // min-height: 235px;
   text-align: center;
-  padding: 30px 0 30px;
 }
 
-.recipe-show .main-image{
+.recipe-head-container .main-image{
   text-align: center;
 }
 
-.description.header{
+.description-header{
   padding: 3.8rem 0 2.7rem;
 }

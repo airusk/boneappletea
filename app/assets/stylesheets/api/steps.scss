@@ -1,3 +1,31 @@
 // Place all the styles related to the api/Steps controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.steps-container{
+  
+}
+
+.step-item .ord{
+  font-family: 'futura-pt',sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.5rem;
+  display: block;
+}
+
+.step-item .step-body{
+  font-family: 'Radley', Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1rem;
+  line-height: 1.66667;
+}
+
+.step-item{
+  padding-bottom: 40px;
+  border-bottom: 5px solid #000;
+  margin-bottom: 40px;
+}
+
+.step-image{
+  width: 100%;
+  text-align: center;
+}
