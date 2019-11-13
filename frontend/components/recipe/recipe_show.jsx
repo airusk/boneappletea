@@ -149,7 +149,7 @@ RecipeShow.defaultProps = {
   recipe:{
     id:"1337",
     title: "Beep.",
-    user_id: "Bop",
+    user_id: "Bop.",
     body: "Boop."
   },
   ingredients:{
