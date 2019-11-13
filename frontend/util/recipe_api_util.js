@@ -1,6 +1,7 @@
 export const fetchPayload = () => (
   $.ajax({
-    url: 'api/recipes'
+    url: 'api/recipes',
+    method: 'GET'
   })
 );
 
