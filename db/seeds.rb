@@ -18,7 +18,7 @@ User.create(name: "Kim Pham", email: "Phamtastic@finalenix.com", password: "fina
 
 # RECIPE SEEDS
 Recipe.create(
-  title: "The Perfect Napolitano Pizza", 
+  title: "The Perfect Neapolitano Pizza", 
   body: "This pie is a family heirloom, my family has been passing this down from great grandmother to grandmother to mother and finally to me. You get the idea, it's a rustic and home-y dish to be sure",
   user_id: 1
 )
