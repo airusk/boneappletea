@@ -3,7 +3,6 @@ import { fetchRecipes } from '../../actions/recipe_actions';
 import RecipeIndex from './recipe_index';
 
 const mapStateToProps = state => {
-  debugger
   return({
     recipes: Object.values(state.entities.recipes)
   })
