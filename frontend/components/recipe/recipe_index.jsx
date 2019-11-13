@@ -14,6 +14,19 @@ class RecipeIndex extends React.Component {
     const { recipes } = this.props;
     return(
       <div className="recipe-index-container">
+        <header className="recipe-index-header">
+          <h1 className="recipe-index-title">
+            Recipes
+          </h1>
+          <div className="searchbar-wrapper">
+            <form className="search-form">
+              <input type="search" className="recipe-index-searchbar" placeholder="Find a Recipe" autoComplete="off"/>
+              <input type="submit" className="search-submit" value=""/>
+            </form>
+          </div>
+        </header>
+        <div className="margin-placeholder">
+        </div>
         <ul className="recipe-card-list">{
           recipes.map(recipe => (
             <RecipeIndexItem
