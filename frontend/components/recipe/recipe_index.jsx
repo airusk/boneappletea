@@ -14,7 +14,7 @@ class RecipeIndex extends React.Component {
     const { recipes } = this.props;
     return(
       <div className="recipe-index-container">
-        <ul>{
+        <ul className="recipe-card-list">{
           recipes.map(recipe => (
             <RecipeIndexItem
               key={recipe.id}

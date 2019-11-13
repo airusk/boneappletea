@@ -34341,3 +34341,1267 @@ Processing by Api::RecipesController#index as JSON
 Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2019-11-12 20:30:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 322ms (Views: 315.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 20:30:02 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (9.1ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/recipes/2" for ::1 at 2019-11-12 20:35:45 -0800
+Processing by Api::RecipesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/recipes_controller.rb:8
+  Rendering api/recipes/show.json.jbuilder
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/views/api/recipes/show.json.jbuilder:8
+  Rendered api/recipes/_ingredient.json.jbuilder (0.8ms)
+  [1m[36mStep Load (0.4ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/views/api/recipes/show.json.jbuilder:15
+  Rendered api/recipes/_step.json.jbuilder (0.2ms)
+  Rendered api/recipes/show.json.jbuilder (9.8ms)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 20:36:14 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (3.6ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 20:36:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 107ms (Views: 104.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 20:36:33 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (1.0ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (7.4ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 20:36:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 480ms (Views: 477.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 20:36:35 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (1.5ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.7ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 20:37:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 367ms (Views: 364.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 20:37:08 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (5.3ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:03:24 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 560ms (Views: 555.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/recipes/1" for ::1 at 2019-11-12 22:03:25 -0800
+Processing by Api::RecipesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/recipes_controller.rb:8
+  Rendering api/recipes/show.json.jbuilder
+  Rendered api/recipes/_recipe.json.jbuilder (2.5ms)
+  [1m[36mIngredient Load (1.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/api/recipes/show.json.jbuilder:8
+  Rendered api/recipes/_ingredient.json.jbuilder (1.5ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.1ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.1ms)
+  [1m[36mStep Load (1.3ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/api/recipes/show.json.jbuilder:15
+  Rendered api/recipes/_step.json.jbuilder (0.3ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.1ms)
+  Rendered api/recipes/_step.json.jbuilder (0.1ms)
+  Rendered api/recipes/_step.json.jbuilder (0.1ms)
+  Rendered api/recipes/_step.json.jbuilder (0.1ms)
+  Rendered api/recipes/show.json.jbuilder (29.2ms)
+Completed 200 OK in 40ms (Views: 31.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:06:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 401ms (Views: 398.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:06:39 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.9ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:10:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 340ms (Views: 338.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:10:29 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (4.7ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:11:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:11:37 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.9ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (4.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:48:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 259ms (Views: 255.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:48:44 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.6ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (8.7ms)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:48:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 137ms (Views: 134.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:48:49 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.7ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (6.4ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:48:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:48:59 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (3.4ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:49:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 328ms (Views: 326.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:49:16 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.5ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (5.5ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:49:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 339ms (Views: 336.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:49:41 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.9ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (6.5ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:53:20 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 351ms (Views: 348.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:53:20 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (6.8ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:53:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 304ms (Views: 302.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:53:44 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.3ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:54:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/recipes/1" for ::1 at 2019-11-12 22:54:09 -0800
+Processing by Api::RecipesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/recipes_controller.rb:8
+  Rendering api/recipes/show.json.jbuilder
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  [1m[36mIngredient Load (1.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/api/recipes/show.json.jbuilder:8
+  Rendered api/recipes/_ingredient.json.jbuilder (0.3ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  [1m[36mStep Load (0.5ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/api/recipes/show.json.jbuilder:15
+  Rendered api/recipes/_step.json.jbuilder (0.3ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/show.json.jbuilder (15.7ms)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:54:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 327ms (Views: 325.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:54:46 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (5.4ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:56:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 108ms (Views: 105.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:56:04 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.7ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (6.1ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:56:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 379ms (Views: 377.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:56:26 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (6.5ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:57:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:57:00 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.8ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:57:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:57:09 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (3.0ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:58:24 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 324ms (Views: 322.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:58:25 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (6.4ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/recipes/1" for ::1 at 2019-11-12 22:58:25 -0800
+Processing by Api::RecipesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/recipes_controller.rb:8
+  Rendering api/recipes/show.json.jbuilder
+  Rendered api/recipes/_recipe.json.jbuilder (0.2ms)
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/api/recipes/show.json.jbuilder:8
+  Rendered api/recipes/_ingredient.json.jbuilder (4.3ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  [1m[36mStep Load (1.0ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/api/recipes/show.json.jbuilder:15
+  Rendered api/recipes/_step.json.jbuilder (0.3ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/show.json.jbuilder (17.7ms)
+Completed 200 OK in 26ms (Views: 20.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:58:26 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (3.2ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:58:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 305ms (Views: 302.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:58:35 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (1.1ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (5.5ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 22:59:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 94ms (Views: 92.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:59:31 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.1ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes/1" for ::1 at 2019-11-12 22:59:33 -0800
+Processing by Api::RecipesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (6.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/recipes_controller.rb:8
+  Rendering api/recipes/show.json.jbuilder
+  Rendered api/recipes/_recipe.json.jbuilder (1.2ms)
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/api/recipes/show.json.jbuilder:8
+  Rendered api/recipes/_ingredient.json.jbuilder (0.2ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  [1m[36mStep Load (0.4ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/api/recipes/show.json.jbuilder:15
+  Rendered api/recipes/_step.json.jbuilder (1.2ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/show.json.jbuilder (13.7ms)
+Completed 200 OK in 28ms (Views: 18.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:59:33 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (3.3ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes/2" for ::1 at 2019-11-12 22:59:34 -0800
+Processing by Api::RecipesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (5.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/recipes_controller.rb:8
+  Rendering api/recipes/show.json.jbuilder
+  Rendered api/recipes/_recipe.json.jbuilder (0.2ms)
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/views/api/recipes/show.json.jbuilder:8
+  Rendered api/recipes/_ingredient.json.jbuilder (0.2ms)
+  [1m[36mStep Load (0.2ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/views/api/recipes/show.json.jbuilder:15
+  Rendered api/recipes/_step.json.jbuilder (0.2ms)
+  Rendered api/recipes/show.json.jbuilder (5.4ms)
+Completed 200 OK in 17ms (Views: 8.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 22:59:34 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (1.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (3.7ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:25:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 158ms (Views: 153.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:25:01 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (7.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.6ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (11.3ms)
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:26:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:26:35 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (3.8ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:26:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:26:53 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (3.6ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:27:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 369ms (Views: 363.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:27:24 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (21.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (24.7ms)
+Completed 200 OK in 31ms (Views: 7.4ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:28:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 322ms (Views: 320.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:28:23 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.3ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:29:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:29:02 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (3.1ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:29:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.2ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "  padding": expected ";", was ": 6rem 3rem;":
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3546637651974175340_70117795754100'
+
+Started POST "/__better_errors/5b7ab75c9ce98f81/variables" for ::1 at 2019-11-12 23:29:29 -0800
+Started GET "/" for ::1 at 2019-11-12 23:29:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:29:35 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (3.2ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:31:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:31:03 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (3.5ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:31:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 71ms (Views: 68.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:31:45 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (13.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (1.0ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (17.6ms)
+Completed 200 OK in 24ms (Views: 7.9ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:31:58 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:31:58 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (3.8ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:32:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:32:26 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.0ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:34:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:34:21 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (3.8ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:35:15 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:35:15 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.6ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (9.2ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:35:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 67ms (Views: 64.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:35:27 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.6ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.7ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:35:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:35:56 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.5ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.5ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:36:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 84ms (Views: 82.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:36:47 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.5ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.3ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:37:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 109ms (Views: 106.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:37:54 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.5ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.0ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:38:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:38:13 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.3ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:38:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 97ms (Views: 94.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:38:37 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.7ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.4ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:39:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 108ms (Views: 106.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:39:19 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (3.9ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:39:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:39:50 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (3.6ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:40:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 343ms (Views: 341.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:40:56 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.5ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.1ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:41:58 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 96ms (Views: 94.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:41:58 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (3.9ms)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:42:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:42:25 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (4.0ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:42:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 88ms (Views: 86.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:42:32 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.2ms)
+  Rendered api/recipes/index.json.jbuilder (4.5ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:42:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:42:48 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.5ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.8ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 23:43:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:43:05 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.5ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.1ms)
+  Rendered api/recipes/index.json.jbuilder (4.4ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/recipes/2" for ::1 at 2019-11-12 23:43:15 -0800
+Processing by Api::RecipesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/recipes_controller.rb:8
+  Rendering api/recipes/show.json.jbuilder
+  Rendered api/recipes/_recipe.json.jbuilder (0.4ms)
+  [1m[36mIngredient Load (0.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/views/api/recipes/show.json.jbuilder:8
+  Rendered api/recipes/_ingredient.json.jbuilder (0.3ms)
+  [1m[36mStep Load (0.5ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/views/api/recipes/show.json.jbuilder:15
+  Rendered api/recipes/_step.json.jbuilder (0.2ms)
+  Rendered api/recipes/show.json.jbuilder (8.2ms)
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:43:16 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (3.0ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/recipes/1" for ::1 at 2019-11-12 23:43:17 -0800
+Processing by Api::RecipesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/recipes_controller.rb:8
+  Rendering api/recipes/show.json.jbuilder
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/api/recipes/show.json.jbuilder:8
+  Rendered api/recipes/_ingredient.json.jbuilder (0.3ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  Rendered api/recipes/_ingredient.json.jbuilder (0.0ms)
+  [1m[36mStep Load (0.3ms)[0m  [1m[34mSELECT "steps".* FROM "steps" WHERE "steps"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/api/recipes/show.json.jbuilder:15
+  Rendered api/recipes/_step.json.jbuilder (0.3ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/_step.json.jbuilder (0.1ms)
+  Rendered api/recipes/_step.json.jbuilder (0.0ms)
+  Rendered api/recipes/show.json.jbuilder (11.4ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/recipes" for ::1 at 2019-11-12 23:43:18 -0800
+Processing by Api::RecipesController#index as JSON
+  Rendering api/recipes/index.json.jbuilder
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/views/api/recipes/index.json.jbuilder:1
+  Rendered api/recipes/_recipe.json.jbuilder (0.3ms)
+  Rendered api/recipes/_recipe.json.jbuilder (0.0ms)
+  Rendered api/recipes/index.json.jbuilder (3.0ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
