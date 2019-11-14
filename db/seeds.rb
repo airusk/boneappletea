@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+
 User.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
@@ -22,11 +24,18 @@ Recipe.create(
   body: "This pie is a family heirloom, my family has been passing this down from great grandmother to grandmother to mother and finally to me. You get the idea, it's a rustic and home-y dish to be sure",
   user_id: 1
 )
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/una-pizzeria-2.png')
+Recipe.last.image.attach(io: file, filename: 'una-pizzeria-2.png')
+
+
 Recipe.create(
   title: "totino's pizza rolls", 
   body: "Set it and forget it!", 
   user_id: 2
 )
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/2/Totino_Pizza_Rolls_large.jpg')
+Recipe.last.image.attach(io: file, filename: 'Totino_Pizza_Rolls_large.jpg')
+
 
 # INGREDIENT SEEDS
 Ingredient.create(
@@ -71,33 +80,55 @@ Step.create(
   recipe_id: 1,
   ord: 1
 )
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+1.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+1.mp4.webm')
+
+
 Step.create(
   body:"Turn out dough onto a work surface. Cut dough in half, then shape each half into a ball. Place each ball in separate medium bowls. Drizzle with just enough oil to coat. Cover bowls with plastic wrap. Chill at least 24 hours and up to 2 days.",
   recipe_id: 1,
   ord: 2
 )
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+2.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+2.mp4.webm')
+
 Step.create(
   body:"Let dough come to room temperature until nearly doubled in size and slowly springs back when poked, 2–2½ hours. Dough is now ready for shaping.",
   recipe_id: 1,
   ord: 3
 )
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+3.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+3.mp4.webm')
+
 Step.create(
   body:"Place a rack in top third of oven; preheat to 475° (if you have a pizza stone, use it!). Pulse cheese, garlic, lime juice, 1 cup basil, 1 cup carrot tops, ⅓ cup oil, and ¼ cup mint in a food processor until smooth; season with salt. (You can also make the carrot top pesto by chopping everything by hand.)",
   recipe_id: 1,
   ord: 4
 )
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+4.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+4.mp4.webm')
+
 Step.create(
   body:"Stretch dough, 1 ball at a time, on a lightly oiled large rimmed baking sheet until 12–14\" in diameter. Spread with half of the pesto, then top with half of carrots and chiles. Drizzle with more oil; season with salt.",
   recipe_id: 1,
   ord: 5
 )
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+5.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+5.mp4.webm')
+
 Step.create(
   body:"Bake on top rack until crust is golden brown and crisp, 10–12 minutes. Let pizza cool 1 minute, then top with carrot tops, basil, mint, pea shoots and/or blue basil. Serve immediately.",
   recipe_id: 1,
   ord: 6
 )
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+6.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+6.mp4.webm')
+
 Step.create(
   body:"A step that doesn't belong to recipeId 1.",
   recipe_id: 2,
   ord: 420
 )
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+7.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+7.mp4.webm')
+

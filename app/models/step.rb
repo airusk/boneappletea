@@ -15,4 +15,5 @@ class Step < ApplicationRecord
   validates :ord, uniqueness: { scope: :recipe_id }
 
   belongs_to :recipe
+  has_one_attached :image
 end

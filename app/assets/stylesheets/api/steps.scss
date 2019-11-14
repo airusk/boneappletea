@@ -25,7 +25,11 @@
   margin-bottom: 40px;
 }
 
-.step-image{
-  width: 100%;
+.step-media{
+  max-width: 100%;
   text-align: center;
+}
+
+video::-webkit-media-controls{
+  display: none;
 }

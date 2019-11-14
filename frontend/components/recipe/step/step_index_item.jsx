@@ -6,7 +6,16 @@ const StepIndexItem = props => (
     <div className="step-body">
       {props.step.body}
     </div>
-    <div className="step-image">step_{props.step.ord}.gif</div>
+    {/* <div className="step-media"> */}
+      <video 
+        className="step-media" 
+        src={props.step.imageUrl} 
+        loop webkit-playsinline="true" 
+        playsinline="true"
+        autoPlay="autoplay" 
+        type="video/webm"
+      />
+    {/* </div> */}
   </li>
 );
 export default StepIndexItem;
