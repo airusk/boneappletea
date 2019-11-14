@@ -4,6 +4,8 @@
 .recipe-page{
   padding-top: 50px;
   background-color: #fff;
+  display: block;
+  max-width: auto;
 }
 
 .recipe-head-container{
@@ -55,8 +57,9 @@
   text-align: center;
 }
 
-.recipe-head-container .main-image{
-  text-align: center;
+.recipe-head-container .main-image img{
+  width: 100%;
+  height: auto;
 }
 
 .description-header{
