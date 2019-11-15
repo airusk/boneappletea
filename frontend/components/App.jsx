@@ -19,13 +19,8 @@ const App = () => (
       {/* change /recipes/ to /recipes/ for show page */}
       <Route exact path="/recipes/" component={RecipeIndexContainer}/> 
       <Route exact path="/recipes/:recipeId" component={RecipeShowContainer}/> 
-<<<<<<< HEAD
       {/* <Route exact path="/" component={HomepageContainer} /> */}
       <Redirect to="/recipes/"/>
-=======
-      <Route exact path="/" component={HomepageContainer} />
-      <Redirect to="/"/>
->>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
     </Switch>
   </div>
 );

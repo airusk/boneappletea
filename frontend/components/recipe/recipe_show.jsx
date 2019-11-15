@@ -1,16 +1,12 @@
 import React from 'react';
 import IngredientIndexItem from './ingredient/ingredient_index_item';
 import StepIndexItem from './step/step_index_item';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
->>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
 
 class RecipeShow extends React.Component{
 
   componentDidMount(){
     this.props.fetchRecipe(this.props.match.params.recipeId);
-<<<<<<< HEAD
     window.scrollTo(0, 0);
   }
   componentDidUpdate(prevProps){
@@ -19,16 +15,12 @@ class RecipeShow extends React.Component{
     }
   }
 
-=======
-  }
->>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
   render(){
     const { recipe, ingredients, steps } = this.props;
 
     const recipeHead  = (
         <div className="recipe-head-container">
           <div className="recipe-header">
-<<<<<<< HEAD
             <a className="theme subheading">
               <Link to="/recipes">Recipes</Link>
             </a>
@@ -39,19 +31,6 @@ class RecipeShow extends React.Component{
             </div> */}
             <div className="rating subheading">
               No Ratings Yet
-=======
-            <a className="theme unhealthy subheading">
-              Unhealthyish
-              {/* replace with new theme attribute from recipe */}
-            </a>
-            <h1 className="title">{recipe.title}</h1>
-            <div className="author">
-              <br />
-              <p> Author ID: {recipe.userId}</p>
-            </div>
-            <div className="rating subheading">
-              12 ratings *****
->>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
             </div>
           </div>
           <div className="main-image">
