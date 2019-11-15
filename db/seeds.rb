@@ -18,6 +18,7 @@ User.create(name: "Stephen Gee Lee", email: "nonuts@painterest.com", password: "
 User.create(name: "Maximus Li", email: "nomin@wowelp.com", password: "onlymax")
 User.create(name: "Kim Pham", email: "Phamtastic@finalenix.com", password: "finalfantasy14")
 
+<<<<<<< HEAD
 ###
 #
 #
@@ -95,35 +96,80 @@ Recipe.last.image.attach(io: file, filename: 'blackberry-icebox-cake.jpg')
 ###
 Ingredient.create(
   text: "1 3½–4-lb. whole chicken", 
+=======
+# RECIPE SEEDS
+Recipe.create(
+  title: "The Perfect Neapolitano Pizza", 
+  body: "This pie is a family heirloom, my family has been passing this down from great grandmother to grandmother to mother and finally to me. You get the idea, it's a rustic and home-y dish to be sure",
+  user_id: 1
+)
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/una-pizzeria-2.png')
+Recipe.last.image.attach(io: file, filename: 'una-pizzeria-2.png')
+
+
+Recipe.create(
+  title: "totino's pizza rolls", 
+  body: "Set it and forget it!", 
+  user_id: 2
+)
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/2/Totino_Pizza_Rolls_large.jpg')
+Recipe.last.image.attach(io: file, filename: 'Totino_Pizza_Rolls_large.jpg')
+
+
+# INGREDIENT SEEDS
+Ingredient.create(
+  text: "1.34 mili-quarts of hot sopressata", 
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
   recipe_id: 1, 
   ord: 1
 )
 Ingredient.create(
+<<<<<<< HEAD
   text: "1 Tbsp. Diamond Crystal or 1¾ tsp. Morton kosher salt, plus more", 
+=======
+  text: "12.5 shreds'o parmer john o-reggie arnold", 
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
   recipe_id: 1, 
   ord: 2
 )
 Ingredient.create(
+<<<<<<< HEAD
   text: "Freshly ground black pepper", 
+=======
+  text: "3 cans of heinz catsup", 
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
   recipe_id: 1,
   ord: 3
 )
 Ingredient.create(
+<<<<<<< HEAD
   text: "5 Tbsp. gochujang (Korean hot pepper paste)", 
+=======
+  text: "1 lub whole-wheat white barley rice flour", 
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
   recipe_id: 1, 
   ord: 4
 )
 Ingredient.create(
+<<<<<<< HEAD
   text: "¼ cup plus 2 Tbsp. extra-virgin olive oil", 
+=======
+  text: "5 new-york wourder", 
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
   recipe_id: 1, 
   ord: 5
 )
 Ingredient.create(
+<<<<<<< HEAD
   text: "2 heads of garlic", 
+=======
+  text: "1 baby-handfull of olives", 
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
   recipe_id: 1, 
   ord: 6
 )
 Ingredient.create(
+<<<<<<< HEAD
   text: "1 ½\" piece fresh ginger", 
   recipe_id: 1, 
   ord: 7
@@ -979,3 +1025,68 @@ Step.create(
 )
 # file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/6/blackberry-icebox-cake-12.mp4.webm')
 # Step.last.image.attach(io: file, filename: 'blackberry-icebox-cake-12.mp4.webm')
+=======
+  text: "8 crack open a cold one", 
+  recipe_id: 2, 
+  ord: 1
+)
+
+# STEP SEEDS
+Step.create(
+  body:"Mix sugar, yeast, and ¾ cup warm water in the bowl of a stand mixer (or in a large bowl if doing by hand) fitted with the dough hook. Stir in flour and 1½ Tbsp. oil. Mix on low speed, scraping down sides of bowl as needed, until dough comes together in a smooth mass and no longer sticks to the sides of bowl, 5–6 minutes. Cover dough and let rest 30 minutes at room temperature. Add salt and continue to knead until fully incorporated into dough.",
+  recipe_id: 1,
+  ord: 1
+)
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+1.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+1.mp4.webm')
+
+
+Step.create(
+  body:"Turn out dough onto a work surface. Cut dough in half, then shape each half into a ball. Place each ball in separate medium bowls. Drizzle with just enough oil to coat. Cover bowls with plastic wrap. Chill at least 24 hours and up to 2 days.",
+  recipe_id: 1,
+  ord: 2
+)
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+2.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+2.mp4.webm')
+
+Step.create(
+  body:"Let dough come to room temperature until nearly doubled in size and slowly springs back when poked, 2–2½ hours. Dough is now ready for shaping.",
+  recipe_id: 1,
+  ord: 3
+)
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+3.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+3.mp4.webm')
+
+Step.create(
+  body:"Place a rack in top third of oven; preheat to 475° (if you have a pizza stone, use it!). Pulse cheese, garlic, lime juice, 1 cup basil, 1 cup carrot tops, ⅓ cup oil, and ¼ cup mint in a food processor until smooth; season with salt. (You can also make the carrot top pesto by chopping everything by hand.)",
+  recipe_id: 1,
+  ord: 4
+)
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+4.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+4.mp4.webm')
+
+Step.create(
+  body:"Stretch dough, 1 ball at a time, on a lightly oiled large rimmed baking sheet until 12–14\" in diameter. Spread with half of the pesto, then top with half of carrots and chiles. Drizzle with more oil; season with salt.",
+  recipe_id: 1,
+  ord: 5
+)
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+5.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+5.mp4.webm')
+
+Step.create(
+  body:"Bake on top rack until crust is golden brown and crisp, 10–12 minutes. Let pizza cool 1 minute, then top with carrot tops, basil, mint, pea shoots and/or blue basil. Serve immediately.",
+  recipe_id: 1,
+  ord: 6
+)
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+6.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+6.mp4.webm')
+
+Step.create(
+  body:"A step that doesn't belong to recipeId 1.",
+  recipe_id: 2,
+  ord: 420
+)
+file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/1/PIZZA+STEP+7.mp4.webm')
+Step.last.image.attach(io: file, filename: 'PIZZA+STEP+7.mp4.webm')
+
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045

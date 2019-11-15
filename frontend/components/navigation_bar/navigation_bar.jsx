@@ -33,7 +33,11 @@ class NavigationBar extends React.Component {
           <img src={window.logoURL} />
         </Link>
         {sessionLinks}
+<<<<<<< HEAD
         {/* <div className="search"><SearchSVG width="22"/></div> */}
+=======
+        <div className="search"><SearchSVG width="22"/></div>
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
       </nav>
     )
     return (

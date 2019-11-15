@@ -42,7 +42,10 @@
 
 .navigation-bar .link-sessions{
   position: fixed;
+<<<<<<< HEAD
   top:0;
+=======
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
   left: 87.5%;
   display: flex;
   justify-content: space-around;
@@ -52,17 +55,24 @@
   margin-right: 1rem;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1024px){
   .navigation-bar .link-sessions{
     // display:none;
   }
 }
 
+=======
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
 .navigation-bar .bars{
   cursor: pointer;
   position: fixed;
   width: 1rem;
+<<<<<<< HEAD
   height: 1.1rem;
+=======
+  height: 1rem;
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
   top: 0;
   left: 0;
   padding: 1rem;
@@ -77,7 +87,11 @@
   cursor: pointer;
   position: fixed;
   width: 1rem;
+<<<<<<< HEAD
   height: 1.1rem;
+=======
+  height: 1rem;
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
   right: 0;
   top: 0;
   padding: 1rem;
@@ -87,3 +101,13 @@
   display: block;
   background-color: #2e2e2e;
 }
+<<<<<<< HEAD
+=======
+
+@media screen and (max-width: 1024px){
+  .navigation-bar .link-sessions{
+    display:none;
+  }
+}
+
+>>>>>>> df891b9cabf479713b9eb83794a8ab931b363045
