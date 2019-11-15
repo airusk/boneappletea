@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded',() => {
     store = configureStore();
   }
   // TESTING
-  window.getState = store.getState;
-  window.dispatch = store.dispatch; // just for testing!
-  window.fetchRecipe = fetchRecipe;
-  window.fetchRecipes = fetchRecipes;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch; // just for testing!
+  // window.fetchRecipe = fetchRecipe;
+  // window.fetchRecipes = fetchRecipes;
   // TESTING 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store = {store}/>, root);
