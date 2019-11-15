@@ -1,29 +1,36 @@
 import React from 'react';
 import IngredientIndexItem from './ingredient/ingredient_index_item';
 import StepIndexItem from './step/step_index_item';
+import { Link } from 'react-router-dom';
 
 class RecipeShow extends React.Component{
 
   componentDidMount(){
     this.props.fetchRecipe(this.props.match.params.recipeId);
+    window.scrollTo(0, 0);
   }
+  componentDidUpdate(prevProps){
+    if(prevProps.match.params.recipeId != this.props.match.params.recipeId){
+      this.props.fetchRecipe(this.props.match.params.recipeId);
+    }
+  }
+
   render(){
     const { recipe, ingredients, steps } = this.props;
 
     const recipeHead  = (
         <div className="recipe-head-container">
           <div className="recipe-header">
-            <a className="theme unhealthy subheading">
-              Unhealthyish
-              {/* replace with new theme attribute from recipe */}
+            <a className="theme subheading">
+              <Link to="/recipes">Recipes</Link>
             </a>
             <h1 className="title">{recipe.title}</h1>
-            <div className="author">
+            {/* <div className="author">
               <br />
               <p> Author ID: {recipe.userId}</p>
-            </div>
+            </div> */}
             <div className="rating subheading">
-              12 ratings *****
+              No Ratings Yet
             </div>
           </div>
           <div className="main-image">

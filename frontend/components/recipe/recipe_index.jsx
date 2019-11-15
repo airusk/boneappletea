@@ -8,6 +8,7 @@ class RecipeIndex extends React.Component {
   
   componentDidMount(){
     this.props.fetchRecipes();
+    window.scrollTo(0, 0);
   }
   
   render() {

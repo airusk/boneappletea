@@ -75,6 +75,10 @@
 
 
 // Recipe Cards
+.recipe-card-list{
+  display: block;
+}
+
 .recipe-card{
   display:flex;
   flex-direction: row;
@@ -83,9 +87,11 @@
   // border: blue 3px solid;
 }
 
+
 .recipe-card .card-body{
-  min-height: 175px;
-  width:35%;
+  // min-height: 175px;
+  height: auto;
+  width: 35%;
   padding: 6rem 3rem;
   text-align: center;
   // border: red 2px solid;
@@ -101,15 +107,21 @@
     letter-spacing: .5px;
     margin-block-start: 1em;
     margin-block-end: 1em;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }
 
-.recipe-card-list li:nth-child(2){
+.recipe-card-list li:nth-child(even){
   display:flex;
   flex-direction: row-reverse;
   // border: blue 3px solid;
 }
 
-.recipe-card-list li .card-body:nth-child(2){
+.recipe-card-list li .card-body:nth-child(2n){
   width: 35%;
 }
 
@@ -145,12 +157,18 @@
   border: 1px solid #000;
 }
 
-.recipe-card .card-title{
-  font-family: 'futura-pt',sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 3rem;
-  line-height: 1.16;
-  max-width: 100%;
-  letter-spacing: 1.3px;
+@media (min-width: 800px){
+  .recipe-card .card-title{
+    font-size: 3rem;
+  } 
 }
+
+.recipe-card .card-title{
+    font-family: 'futura-pt',sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.16;
+    max-width: 100%;
+    letter-spacing: 1.3px;
+  } 

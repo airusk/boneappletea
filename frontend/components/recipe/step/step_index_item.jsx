@@ -11,7 +11,7 @@ const StepIndexItem = props => (
         className="step-media" 
         src={props.step.imageUrl} 
         loop webkit-playsinline="true" 
-        playsinline="true"
+        playsInLine="true"
         autoPlay="autoplay" 
         type="video/webm"
       />
