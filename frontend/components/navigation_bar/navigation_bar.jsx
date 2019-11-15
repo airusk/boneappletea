@@ -2,18 +2,35 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BarsSVG from '../icons/bars_icon';
 import SearchSVG from '../icons/search_icon';
-import Accordion from '../dropdown/accordion';
+import CloseSVG from '../icons/close_icon';
 
 
 class NavigationBar extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      hidden: true
+    }
     this.handleClick = this.handleClick.bind(this);
+    this.handleBars = this.handleBars.bind(this);
   }
   handleClick(e) {
     e.preventDefault();
     this.props.logout();
   }
+
+  handleBars(e){
+    e.preventDefault();
+    this.setState( {hidden: !this.state.hidden} )
+  }
+
+  handleKeyPress(e){
+    if(e.keyCode === 27){
+      console.log("esc pressed");
+      this.handleBars(e)
+    }
+  }
+
 
   render() {
     const sessionLinks = this.props.user ?
@@ -29,19 +46,25 @@ class NavigationBar extends React.Component {
       );
       
     let recipeLink = this.props.location.pathname !== "/recipes" ? 
-    <a><Link to="/recipes">Recipes</Link></a> : null
+    <Link to="/recipes" className="subheading">Recipes</Link> : null
 
+
+    const display = this.state.hidden ? "hidden" : "visible";
 
     const dropdown = (
       <div className="dropdown">
-        <div className="bars"><BarsSVG width="22"  onClick={this.handleBars}/></div>
-          <Accordion>
-            <div className="dropdown-content">
-              {recipeLink}
-              <a href="#" className="dropdown-content">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-          </Accordion>
+        <button className="bars" onClick={this.handleBars}><BarsSVG width="22"/></button>
+        <div className={`dropdown-content ${display}`}>
+          <button className="icon close" onClick={this.handleBars} onKeyPress={this.handleKeyPress}><CloseSVG/></button>
+          <div className="dropdown-logo-box">
+            <Link to="/" className="logo-container">
+              <img src={window.logo2URL} className="dropdown-logo"/>
+            </Link>
+          </div>
+          {recipeLink}
+          <a href="https://www.linkedin.com/in/nsuriawijaya/" target="_blank" className="subheading">LinkedIn</a>
+          <a href="https://github.com/airusk" target="_blank" className="subheading">Github</a>
+        </div>
       </div>
     );
 
