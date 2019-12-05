@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import BarsSVG from '../icons/bars_icon';
 import SearchSVG from '../icons/search_icon';
 import CloseSVG from '../icons/close_icon';
@@ -13,6 +13,7 @@ class NavigationBar extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this);
     this.handleBars = this.handleBars.bind(this);
+    this.handleNavigate = this.handleNavigate.bind(this);
   }
   handleClick(e) {
     e.preventDefault();
@@ -21,6 +22,10 @@ class NavigationBar extends React.Component {
 
   handleBars(e){
     e.preventDefault();
+    this.setState( {hidden: !this.state.hidden} )
+  }
+
+  handleNavigate(e){
     this.setState( {hidden: !this.state.hidden} )
   }
 
@@ -45,8 +50,14 @@ class NavigationBar extends React.Component {
         </div>
       );
       
-    let recipeLink = this.props.location.pathname !== "/recipes" ? 
-    <Link to="/recipes" className="subheading">Recipes</Link> : null
+    let recipeLink = this.props.location.pathname !== "/recipes/" ? 
+      <Link
+        to="/recipes/" 
+        className="subheading" 
+        onClick={this.handleNavigate}>
+        Recipes
+      </Link> 
+      : null
 
 
     const display = this.state.hidden ? "hidden" : "visible";
@@ -62,8 +73,8 @@ class NavigationBar extends React.Component {
             </Link>
           </div>
           {recipeLink}
-          <a href="https://www.linkedin.com/in/nsuriawijaya/" target="_blank" className="subheading">LinkedIn</a>
-          <a href="https://github.com/airusk" target="_blank" className="subheading">Github</a>
+          <a href="https://www.linkedin.com/in/airusk/" target="_blank" className="subheading" onClick={this.handleNavigate}>LinkedIn</a>
+          <a href="https://github.com/airusk" target="_blank" className="subheading" onClick={this.handleNavigate}>Github</a>
         </div>
       </div>
     );

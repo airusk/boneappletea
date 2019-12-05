@@ -17,9 +17,9 @@ const App = () => (
     </header>
     <Switch>
       {/* change /recipes/ to /recipes/ for show page */}
-      <Route exact path="/recipes/" component={RecipeIndexContainer}/> 
       <Route exact path="/recipes/:recipeId" component={RecipeShowContainer}/> 
-      {/* <Route exact path="/" component={HomepageContainer} /> */}
+      <Route exact path="/recipes/" component={RecipeIndexContainer}/> 
+      <Route exact path="/" component={HomepageContainer} />
       <Redirect to="/recipes/"/>
     </Switch>
   </div>

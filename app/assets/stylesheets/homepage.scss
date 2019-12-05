@@ -1,6 +1,7 @@
 .page-home{
   background-color: #F8F8F8;
   display: flex;
+  flex-direction: column;
   height: 1200px;
   width: 100%;
   justify-content: center;
@@ -9,4 +10,23 @@
 .page-home h1{
   padding-top: 1000px;
   color: black;
+}
+
+.featured-recipe{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  height: auto;
+  border: red 2px solid;
+}
+
+.featured-image{
+  border: blue 2px solid;
+  width: 50%;
+}
+
+.featured-description{
+  border: green 2px solid;
+  width: 50%;
+  // height: 250px;
 }

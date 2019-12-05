@@ -92,17 +92,14 @@
 }
 
 .recipe-card .card-body{
-  // min-height: 175px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: auto;
-  // max-height: 600px;
   width: 35%;
   padding: 6rem 3rem;
   text-align: center;
-  // border: red 2px solid;
 }
 
 .recipe-card .card-copy{
