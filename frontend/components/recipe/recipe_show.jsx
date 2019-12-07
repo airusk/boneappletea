@@ -21,7 +21,7 @@ class RecipeShow extends React.Component{
     const recipeHead  = (
         <div className="recipe-head-container">
           <div className="recipe-header">
-            <Link to="/recipes" className="theme subheading">Recipes</Link>
+            <Link to="/recipes/" className="theme subheading">Recipes</Link>
             <h1 className="title">{recipe.title}</h1>
             {/* <div className="author">
               <br />

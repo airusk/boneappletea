@@ -1,6 +1,6 @@
 .recipe-index-container{
   margin-top: 50px;
-  background-color: #F8F8F8;
+  background-color: var(--background-color);
 }
 
 //Recipe Index Header
@@ -10,7 +10,7 @@
 }
 
 .recipe-index-title{
-  font-family: 'futura-pt',sans-serif;
+  font-family: var(--heading-font);
   font-weight: 600;
   font-style: normal;
   font-size: 4.5rem;
@@ -35,11 +35,11 @@
   font-style: normal;
   font-stretch: normal;
   line-height: 1.27;
-  font-family: 'futura-pt',sans-serif;
+  font-family: var(--heading-font);
   font-weight: 500;
   padding-left: 2.5rem;
   border: 2px solid #000;
-  background: #fff;
+  background: var(--container-color);
   font-size: 1.5rem;
   letter-spacing: normal;
   text-align: left;
@@ -83,8 +83,7 @@
   display:flex;
   flex-direction: row;
   margin-bottom: 30px;
-  background-color: #fff;
-  // border: blue 3px solid;
+  background-color: var(--container-color);
 }
 
 .recipe-card-text{
@@ -104,7 +103,7 @@
 
 .recipe-card .card-copy{
     display: block;
-    font-family: 'futura-pt',sans-serif;
+    font-family: var(--heading-font);
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
@@ -138,10 +137,10 @@
 
 .recipe-button{
   width: fit-content;
-  font-family: 'futura-pt',sans-serif;
+  font-family: var(--heading-font);
   font-weight: 500;
   background: #000;
-  color: #fff;
+  color: var(--container-color);
   position: relative;
   padding: .6rem 2.5rem;
   border: 0;
@@ -164,7 +163,7 @@
 }
 
 .recipe-card .card-title{
-    font-family: 'futura-pt',sans-serif;
+    font-family: var(--heading-font);
     font-weight: 500;
     font-style: normal;
     font-size: 1.5rem;

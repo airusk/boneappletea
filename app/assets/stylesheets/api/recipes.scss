@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .recipe-page{
   padding-top: 50px;
-  background-color: #fff;
+  background-color: var(--container-color);
   display: block;
   max-width: auto;
 }
@@ -13,7 +13,7 @@
 }
 
 .recipe-head-container .title{
-  font-family: 'futura-pt',sans-serif;
+  font-family: var(--heading-font);
   font-weight: 500;
   font-style: normal;
   font-size: 4rem;
@@ -24,7 +24,7 @@
 }
 
 .recipe-head-container .subheading{
-  font-family: 'futura-pt',sans-serif;
+  font-family: var(--heading-font);
   font-weight: 500;
   font-style: normal;
   font-size: 12pt;
