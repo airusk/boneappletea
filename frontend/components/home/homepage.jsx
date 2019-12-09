@@ -97,7 +97,7 @@ class Homepage extends React.Component{
               <div className="gallery-item-title">
                 <Link to="/recipes/4">
                   <h1>
-                    These summery tacosrely on our go-to fish-cooking 
+                    These summery tacos rely on our go-to fish-cooking 
                     method—slow-roast, baby!
                   </h1>
                 </Link>
