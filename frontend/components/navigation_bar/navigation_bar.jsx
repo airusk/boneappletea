@@ -73,8 +73,26 @@ class NavigationBar extends React.Component {
             </Link>
           </div>
           {recipeLink}
-          <a href="https://www.linkedin.com/in/airusk/" target="_blank" className="subheading" onClick={this.handleNavigate}>LinkedIn</a>
-          <a href="https://github.com/airusk" target="_blank" className="subheading" onClick={this.handleNavigate}>Github</a>
+          <a 
+            href="https://www.linkedin.com/in/airusk/" 
+            target="_blank" className="subheading" 
+            onClick={this.handleNavigate}>LinkedIn
+          </a>
+          <a 
+            href="https://github.com/airusk/boneappletea" 
+            target="_blank" className="subheading" 
+            onClick={this.handleNavigate}>Github
+          </a>
+          <a 
+            href="mailto: nsuriawijaya@gmail.com" 
+            target="_blank" className="subheading" 
+            onClick={this.handleNavigate}>Email
+          </a>
+          <a 
+            href="https://airusk.carbonmade.com" 
+            target="_blank" className="subheading" 
+            onClick={this.handleNavigate}>Portfolio
+          </a>
         </div>
       </div>
     );

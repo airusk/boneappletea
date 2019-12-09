@@ -29,8 +29,6 @@
   }
 }
 
-
-
 .home-card{
   width: 100%;
   height: 56.25vw;
@@ -82,7 +80,7 @@
 
 .featured-gallery{
   background-color: var(--background-color);
-  width: 93%;
+  width: 92%;
   height: 80%;
   margin: auto;
   display: flex;
@@ -138,4 +136,56 @@
         text-decoration: underline;
     }
   }
+}
+
+.half-card{
+  width: 100%;
+  height: 14vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: space-around;
+}
+
+.credits-box{
+  width:100%;
+  height: 80%;
+  background-color: var(--container-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credits{
+  display: flex;
+  width: 50%;
+  height: auto;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  svg:hover{
+    path{
+      fill: var(--recipe-color);
+    }
+  }
+}
+
+.portfolio .laugh{
+  display:none;
+}
+
+.portfolio:hover .meh{
+  display: none;
+}
+
+.portfolio:hover .laugh{
+  display: block;
+}
+
+.credits-tagline{
+  text-align: center;
+  font-family: var(--heading-font);
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+  margin-top: -30px;
 }
