@@ -34,7 +34,7 @@ class Homepage extends React.Component{
       <div className = "page-home" >
         <div className="home-card">
           <div className="index-tag">
-            <Link href="/recipes/" className="recipe subheading">Recipes</Link>
+            <Link to="/recipes/" className="recipe subheading">Recipes</Link>
           </div>
           <div className="featured-recipe">
             <div className="featured-image">
@@ -56,7 +56,7 @@ class Homepage extends React.Component{
         </div>
         <div className="home-card">
           <div className="index-tag">
-            <Link href="/recipes/" className="recipe subheading">Recipes</Link>
+            <Link to="/recipes/" className="recipe subheading">Recipes</Link>
           </div>
           <div className="featured-gallery">
             <div className="gallery-item item-0">
