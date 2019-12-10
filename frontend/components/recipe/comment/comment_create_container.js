@@ -1,14 +1,13 @@
 import { connect } from 'react-redux';
 import CommentCreate from './comment_create';
-import { postComment } from '../../../actions/comment_actions';
+import { createComment } from '../../../actions/comment_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  comment: {},
-  recipeId: ownProps.match.recipeId
+  recipeId: state.entities.recipes[ownProps.recipeId]
 });
 
 const mapDispatchToProps = dispatch => ({
-  action: commment => dispatch(createComment(commment))
+  action: (commment, recipeId) => dispatch(createComment(commment, recipeId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CommentCreate);

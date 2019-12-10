@@ -23,10 +23,14 @@ class Recipe < ApplicationRecord
   def rating
     # Method to create recipe rating through comment ratings.
     total = 0;
+    num_ratings = 0;
     self.comments.each do |comment|
-      total += comment.rating
+      if comment.rating
+        total += comment.rating
+        num_ratings += 1
+      end
     end
-    total / (self.comments.length)
+    total / num_ratings
   end
 
   def again

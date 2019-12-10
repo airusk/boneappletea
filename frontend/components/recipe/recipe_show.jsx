@@ -2,9 +2,14 @@ import React from 'react';
 import IngredientIndexItem from './ingredient/ingredient_index_item';
 import StepIndexItem from './step/step_index_item';
 import CommentIndexItem from './comment/comment_index_item';
+import CommentCreateContainer from './comment/comment_create_container';
 import { Link } from 'react-router-dom';
 
 class RecipeShow extends React.Component{
+
+  constructor(props){
+    super(props);
+  }
 
   componentDidMount(){
     this.props.fetchRecipe(this.props.match.params.recipeId);
@@ -77,6 +82,10 @@ class RecipeShow extends React.Component{
       </div>
     );
 
+    const recipeCommentForm = (
+      <CommentCreateContainer/>
+    );
+
     const recipeComments = (
       <div>
         <div className="comments-header">
@@ -100,6 +109,7 @@ class RecipeShow extends React.Component{
         <div className="recipe-component-container">
           { recipeIngredients }
           { recipeSteps }
+          { recipeCommentForm }
           { recipeComments }
         </div>
       </div>

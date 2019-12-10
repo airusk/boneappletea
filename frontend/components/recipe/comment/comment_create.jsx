@@ -1,11 +1,15 @@
 import React from "react";
-import { withRouter } from 'react-router-dom';
 
 class CommentCreate extends React.Component{
   constructor(props){
     super(props);
-    this.state = this.props.comment;
-    this.state.recipe_id = 
+    this.state = {
+      recipe_id: this.props.recipeId,
+      again: true,
+      body: "",
+      rating: null,
+      anonymous: true
+    }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -104,4 +108,4 @@ class CommentCreate extends React.Component{
   }
 }
 
-export default withRouter(CommentCreate);
+export default CommentCreate;
