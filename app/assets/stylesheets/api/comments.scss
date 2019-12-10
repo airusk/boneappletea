@@ -1,0 +1,52 @@
+// Place all the styles related to the api/Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comments-container{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.comments-header h4{
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  max-width: 100%;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.comment-item{
+  display: block;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid black;
+}
+
+.comment-body{
+  font-family: var(--body-font);
+  font-size: 1.2rem;
+  line-height: 1.66667;
+}
+
+.comment-footer{
+  margin-top: 15px;
+  font-family: var(--heading-font);
+  font-size: .8rem;
+  text-transform: uppercase;
+  .comment-author{
+    font-weight: 700;
+  }
+  .comment-date{
+    font-weight: 400;
+  }
+}
+
+.comment-author::after{
+  content: "\2022";
+  display: inline-block;
+  margin:0 5px;
+}

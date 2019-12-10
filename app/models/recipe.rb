@@ -17,8 +17,24 @@ class Recipe < ApplicationRecord
   has_many :ingredients
   has_many :steps
   has_one_attached :image
+  has_many :comments
+
 
   def rating
     # Method to create recipe rating through comment ratings.
+    total = 0;
+    self.comments.each do |comment|
+      total += comment.rating
+    end
+    total / (self.comments.length)
   end
+
+  def again
+    make_again = 0;
+    self.comments.each do |comment|
+      make_again +=1 if comment.again
+    end
+    make_again / (self.comments.length) * 100
+  end
+
 end

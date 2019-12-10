@@ -1,4 +1,4 @@
-json.extract! recipe, :id, :title, :body, :user_id
+json.extract! recipe, :id, :title, :body, :user_id, :comments
 if recipe.image.attached?
   json.imageUrl url_for(recipe.image)
 end

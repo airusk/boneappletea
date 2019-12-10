@@ -10,7 +10,7 @@ const stepsReducer = (oldState = {}, action) => {
     case RECEIVE_ALL_STEPS:
       return action.steps;
     case RECEIVE_RECIPE:
-      return Object.assign(nextState, action.payload.steps)
+      return Object.assign(nextState, action.payload.steps);
     default:
       return oldState;
   }

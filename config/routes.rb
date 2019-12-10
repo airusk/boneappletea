@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
-    resources :recipes, only: [:index, :show]
+    resources :recipes, only: [:index, :show] do
+      resources :comments, only: [:create]
+    end
     #nest comments under recipes
     resources :ingredients, only: [:index]
     resources :steps, only: [:index]

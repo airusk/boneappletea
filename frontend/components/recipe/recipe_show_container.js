@@ -15,7 +15,8 @@ const filterEntities = (recipeComponents, recipeId) => {
 const mapStateToProps = (state, ownProps) => ({
   recipe: state.entities.recipes[ownProps.match.params.recipeId],
   ingredients: filterEntities((state.entities.ingredients),ownProps.match.params.recipeId),
-  steps: filterEntities((state.entities.steps),ownProps.match.params.recipeId)
+  steps: filterEntities((state.entities.steps),ownProps.match.params.recipeId),
+  comments: filterEntities((state.entities.comments),ownProps.match.params.recipeId)
 });
 
 const mapDispatchToProps = dispatch => ({

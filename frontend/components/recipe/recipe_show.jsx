@@ -1,6 +1,7 @@
 import React from 'react';
 import IngredientIndexItem from './ingredient/ingredient_index_item';
 import StepIndexItem from './step/step_index_item';
+import CommentIndexItem from './comment/comment_index_item';
 import { Link } from 'react-router-dom';
 
 class RecipeShow extends React.Component{
@@ -16,7 +17,7 @@ class RecipeShow extends React.Component{
   }
 
   render(){
-    const { recipe, ingredients, steps } = this.props;
+    const { recipe, ingredients, steps, comments } = this.props;
 
     const recipeHead  = (
         <div className="recipe-head-container">
@@ -75,6 +76,23 @@ class RecipeShow extends React.Component{
         </div>
       </div>
     );
+
+    const recipeComments = (
+      <div>
+        <div className="comments-header">
+          <h4>Reviews</h4>
+          <ul className="comments-container">{
+            comments.map(comment => (
+              <CommentIndexItem
+                key={comment.id}
+                comment={comment}
+              />
+            ))
+          }
+          </ul>
+        </div>
+      </div>
+    );
     
     const recipePage = (
       <div className="recipe-page">
@@ -82,6 +100,7 @@ class RecipeShow extends React.Component{
         <div className="recipe-component-container">
           { recipeIngredients }
           { recipeSteps }
+          { recipeComments }
         </div>
       </div>
     );
@@ -109,6 +128,14 @@ RecipeShow.defaultProps = {
     body: "Beep.",
     recipe_id: "Bop.",
     ord: "Boop."
+  },
+  comments:{
+    id: "1337",
+    rating: 404,
+    again: true,
+    body: "Beep.",
+    recipe_id: "Bop.",
+    author_id: "Boop."
   }
 }
 
