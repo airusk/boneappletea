@@ -1,0 +1,29 @@
+.comment-form{
+  font-family: var(--heading-font);
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.comment-form-item{
+  margin-bottom: 21px;
+}
+
+.again-buttons{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.1;
+  display: inline-block;
+  height: 30px;
+  // padding-right: 21px;
+  cursor: pointer;
+  #yes{
+    margin-right: 30px;
+  }
+  #no{
+
+  }
+}
+
+.comment-text-form{
+  width: 100%;
+}

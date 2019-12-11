@@ -5,6 +5,7 @@ class CommentCreate extends React.Component{
     super(props);
     this.state = {
       recipe_id: this.props.recipeId,
+      // recipe_id: this.props.recipe.id,
       author_id: this.props.authorId,
       again: true,
       body: "",
@@ -27,6 +28,7 @@ class CommentCreate extends React.Component{
       },
       this.props.recipeId
     );
+    // this.props.action(this.state,this.props.recipeId);
   }
 
   update(field) {
@@ -39,8 +41,15 @@ class CommentCreate extends React.Component{
         <form onSubmit={this.handleSubmit} className="comment-form">
           <div className="comment-form-item">
             <label>Would you ever make this recipe again?
-              <input type="radio" name="again" id="yes"/> Yes!
-              <input type="radio" name="again" id="no"/> Nope
+              <br/>
+              <div className="again-buttons">
+                <label>
+                  <input type="radio" name="again" id="yes"/> Yes!
+                </label>
+                <label>
+                  <input type="radio" name="again" id="no"/> Nope
+                </label>
+              </div>
             </label>
           </div>
           <div className="comment-form-item">
@@ -49,7 +58,8 @@ class CommentCreate extends React.Component{
               rows="10" 
               placeholder="Write a review..." 
               value={this.state.body} 
-              onChange={this.update('body')}>
+              onChange={this.update('body')}
+              className="comment-text-form">
             </textarea> 
           </div>
           <div className="comment-form-item">

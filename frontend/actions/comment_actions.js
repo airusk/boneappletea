@@ -10,7 +10,6 @@ export const receiveComment = (comment) => {
 };
 
 export const createComment = (formComment, recipeId) => dispatch => {
-  debugger
   (
   CommentAPIUtil.createComment(formComment, recipeId)
     .then(comment => (dispatch(receiveComment(comment))),

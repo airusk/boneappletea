@@ -1,16 +1,12 @@
 class Api::CommentsController < ApplicationController
+  before_action :require_login
   def create
     @comment = Comment.new(comment_params)
-
-    if !!current_user
-       @comment.author_id = current_user.id
-       if @comment.save
-        render :show
-       else
-        render json: [@comment.errors.full_messages], status: 418
-       end
+    @comment.author_id = current_user.id
+    if @comment.save
+      render :show
     else
-      render json: ["You must be logged in to leave a comment"], status: 404
+      render json: @comment.errors.full_messages, status: 418
     end
   end
 

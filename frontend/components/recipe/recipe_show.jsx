@@ -83,23 +83,23 @@ class RecipeShow extends React.Component{
     );
 
     const recipeCommentForm = (
-      <CommentCreateContainer recipeId={this.props.recipe.id}/>
+      <div className="comments-header">
+        <h4>Reviews</h4>
+        <CommentCreateContainer recipeId={this.props.recipe.id}/>
+      </div>
     );
 
     const recipeComments = (
       <div>
-        <div className="comments-header">
-          <h4>Reviews</h4>
-          <ul className="comments-container">{
-            comments.map(comment => (
-              <CommentIndexItem
-                key={comment.id}
-                comment={comment}
-              />
-            ))
-          }
-          </ul>
-        </div>
+        <ul className="comments-container">{
+          comments.map(comment => (
+            <CommentIndexItem
+              key={comment.id}
+              comment={comment}
+            />
+          ))
+        }
+        </ul>
       </div>
     );
     
