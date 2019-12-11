@@ -5,6 +5,7 @@ class CommentCreate extends React.Component{
     super(props);
     this.state = {
       recipe_id: this.props.recipeId,
+      author_id: this.props.authorId,
       again: true,
       body: "",
       rating: null,
@@ -15,7 +16,17 @@ class CommentCreate extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.action(this.state);
+    this.props.action(
+      {
+        recipe_id: this.props.recipe.id,
+        author_id: this.state.author_id,
+        again: this.state.again,
+        body: this.state.body,
+        rating: this.state.rating,
+        anonymous: this.state.anonymous
+      },
+      this.props.recipeId
+    );
   }
 
   update(field) {
@@ -91,20 +102,25 @@ class CommentCreate extends React.Component{
             </div>
           </div>
           <div className="comment-form-item">
-            <label for="display-username">
+            <label className="display-username">
               <input type="checkbox" value="on"/>
               Display my username with review
             </label>
           </div>
           <div className="comment-form-item">
             <div className="comment-form-buttons">
-            <button className="cancel-button" type="button" value="Cancel"/>
-            <button className="save-button" type="submit" value="Save"/>
+              <button className="cancel-button" type="button">Cancel</button>
+              <button className="save-button" type="submit">Save</button>
             </div>
           </div>
         </form>
       </div>
     );
+  }
+}
+CommentCreate.defaultProps = {
+  recipe:{
+    id:404
   }
 }
 

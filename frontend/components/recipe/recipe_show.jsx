@@ -16,7 +16,7 @@ class RecipeShow extends React.Component{
     window.scrollTo(0, 0);
   }
   componentDidUpdate(prevProps){
-    if(prevProps.match.params.recipeId != this.props.match.params.recipeId){
+    if(prevProps.match.params.recipeId !== this.props.match.params.recipeId){
       this.props.fetchRecipe(this.props.match.params.recipeId);
     }
   }
@@ -83,7 +83,7 @@ class RecipeShow extends React.Component{
     );
 
     const recipeCommentForm = (
-      <CommentCreateContainer/>
+      <CommentCreateContainer recipeId={this.props.recipe.id}/>
     );
 
     const recipeComments = (

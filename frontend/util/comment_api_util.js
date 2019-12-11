@@ -1,6 +1,6 @@
-export const createComment= (comment,recipe_id) => {
+export const createComment= (comment,recipeId) => {
   return $.ajax({
-    url: `/api/recipes/${recipe_id}/comments`,
+    url: `/api/recipes/${recipeId}/comments`,
     method: 'POST',
     data: { comment }
   });
