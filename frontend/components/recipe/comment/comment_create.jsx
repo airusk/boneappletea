@@ -43,10 +43,10 @@ class CommentCreate extends React.Component{
             <label>Would you ever make this recipe again?
               <br/>
               <div className="again-buttons">
-                <label>
+                <label className="yes-again-label">
                   <input type="radio" name="again" id="yes"/> Yes!
                 </label>
-                <label>
+                <label className="no-again-label">
                   <input type="radio" name="again" id="no"/> Nope
                 </label>
               </div>

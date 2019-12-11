@@ -15,15 +15,47 @@
   display: inline-block;
   height: 30px;
   // padding-right: 21px;
-  cursor: pointer;
-  #yes{
-    margin-right: 30px;
+  input[type=radio]{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    border: 1px solid #000;
   }
-  #no{
-
+  input[type=radio]:checked{
+    border:0;
+    background: #000;
+  }
+  .yes-again-label{
+    margin-right: 30px;
   }
 }
 
 .comment-text-form{
   width: 100%;
+}
+
+.comment-form-buttons{
+  button{
+    display: inline-block;
+    min-width: 8rem;
+    border: solid 1px #000;
+    line-height: 1.16667;
+    letter-spacing: 2px;
+    width: auto;
+    padding: 17px 25px;
+    font-family: var(--heading-font);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .cancel-button{
+    background-color: #fff;
+    color: #000;
+    margin-right: 25px;
+  }
+  .save-button{
+    background-color: #000;
+    color: #fff;
+  }
 }
