@@ -10,7 +10,7 @@
 #  updated_at :datetime         not null
 #  again      :boolean          default("true")
 #  rating     :integer
-#  anonymous  :boolean          default("false")
+#  anonymous  :boolean          default("true")
 #
 
 require 'test_helper'

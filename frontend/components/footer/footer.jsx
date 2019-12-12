@@ -4,7 +4,7 @@ import LinkedinSVG from '../icons/linkedin-icon';
 import EmailSVG from '../icons/email_icon';
 import PortfolioSVG from '../icons/portfolio-icon';
 
-const FooterContainer = props => (
+const FooterContainer = () => (
   <div className="half-card">
     <div className="credits-box">
       <div className="credits">

@@ -10,7 +10,7 @@
 #  updated_at :datetime         not null
 #  again      :boolean          default("true")
 #  rating     :integer
-#  anonymous  :boolean          default("false")
+#  anonymous  :boolean          default("true")
 #
 
 class Comment < ApplicationRecord
@@ -33,6 +33,6 @@ class Comment < ApplicationRecord
   end
 
   def author
-    anonymous ? "Anonymous" : self.user.name
+    self.anonymous ? "Anonymous" : self.user.name
   end
 end

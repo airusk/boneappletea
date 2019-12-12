@@ -1,4 +1,7 @@
 import React from "react";
+import ThumbsUpSVG from '../../icons/thumbs_up_icon';
+import ThumbsDownSVG from '../../icons/thumbs_down_icon';
+import RatingContainer from './comment_rating';
 
 class CommentCreate extends React.Component{
   constructor(props){
@@ -13,6 +16,8 @@ class CommentCreate extends React.Component{
       anonymous: true
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleStars = this.handleStars.bind(this);
+    this.updateBool = this.updateBool.bind(this);
   }
 
   handleSubmit(e){
@@ -26,8 +31,17 @@ class CommentCreate extends React.Component{
         rating: this.state.rating,
         anonymous: this.state.anonymous
       },
-      this.props.recipeId
-    );
+      this.props.recipeId)
+      // .then(
+      //   () => this.setState({
+      //     recipe_id: this.props.recipeId,
+      //     author_id: this.props.authorId,
+      //     again: true,
+      //     body: "",
+      //     rating: null,
+      //     anonymous: true
+      //   })
+      // );
     // this.props.action(this.state,this.props.recipeId);
   }
 
@@ -35,19 +49,58 @@ class CommentCreate extends React.Component{
     return e => this.setState({ [field]: e.currentTarget.value })
   }
 
+  updateBool(field){
+    return () => this.setState({ [field]: !this.state[field]})
+  }
+
+  handleStars(e){
+    const stars = Array.from(document.getElementsByClassName("rating-star"))
+    for (let star of stars){
+      if (star.value < e.currentTarget.value){
+        star.classList.add("filled");
+      }else{
+        star.classList.remove("filled");
+      }
+    }
+    this.setState({rating: e.currentTarget.value});
+  }
+
   render(){
     return(
       <div>
         <form onSubmit={this.handleSubmit} className="comment-form">
           <div className="comment-form-item">
-            <label>Would you ever make this recipe again?
-              <br/>
+            <label>
+              <p className="again-question">
+                Would you ever make this recipe again?
+              </p>
               <div className="again-buttons">
                 <label className="yes-again-label">
-                  <input type="radio" name="again" id="yes"/> Yes!
+                  <input 
+                    type="radio" 
+                    name="again" 
+                    id="yes"
+                    value="true"
+                    onChange={this.update('again')}
+                    defaultChecked
+                  /> 
+                  <span className="wrappable">
+                    Yes!
+                    <ThumbsUpSVG className="thumbs up"/>
+                  </span>
                 </label>
                 <label className="no-again-label">
-                  <input type="radio" name="again" id="no"/> Nope
+                  <input 
+                    type="radio" 
+                    name="again" 
+                    id="no"
+                    value="false"
+                    onChange={this.update('again')}
+                  />
+                  <span className="wrappable">
+                    Nope
+                    <ThumbsDownSVG className="thumbs down" />
+                  </span>
                 </label>
               </div>
             </label>
@@ -63,14 +116,18 @@ class CommentCreate extends React.Component{
             </textarea> 
           </div>
           <div className="comment-form-item">
-            <div>Rate This Recipe:
+            <div className="rating-container">
+              <label className="rating-question">
+                Rate This Recipe:
+              </label>
               <label className="rating-1-radio">
-                <input 
-                  className= "rating-star"
-                  type="radio" 
-                  name="rating" 
-                  id="rating-1-radio" 
+                <input
+                  className="rating-star"
+                  type="radio"
+                  name="rating"
+                  id="rating-1-radio"
                   value="1"
+                  onClick={this.handleStars}
                 />
               </label>
               <label className="rating-2-radio">
@@ -80,6 +137,7 @@ class CommentCreate extends React.Component{
                   name="rating"
                   id="rating-2-radio"
                   value="2"
+                  onClick={this.handleStars}
                 />
               </label>
               <label className="rating-3-radio">
@@ -89,6 +147,7 @@ class CommentCreate extends React.Component{
                   name="rating"
                   id="rating-3-radio"
                   value="3"
+                  onClick={this.handleStars}
                 />
               </label>
               <label className="rating-4-radio">
@@ -98,6 +157,7 @@ class CommentCreate extends React.Component{
                   name="rating"
                   id="rating-4-radio"
                   value="4"
+                  onClick={this.handleStars}
                 />
               </label>
               <label className="rating-5-radio">
@@ -107,13 +167,14 @@ class CommentCreate extends React.Component{
                   name="rating"
                   id="rating-5-radio"
                   value="5"
+                  onClick={this.handleStars}
                 />
               </label>
             </div>
           </div>
           <div className="comment-form-item">
             <label className="display-username">
-              <input type="checkbox" value="on"/>
+              <input type="checkbox" onChange={this.updateBool('anonymous')}/>
               Display my username with review
             </label>
           </div>
