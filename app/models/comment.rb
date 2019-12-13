@@ -35,4 +35,9 @@ class Comment < ApplicationRecord
   def author
     self.anonymous ? "Anonymous" : self.user.name
   end
+
+  def fix_rating
+    self.rating = nil if !(self.rating > 0 && self.rating < 5)
+  end
+
 end

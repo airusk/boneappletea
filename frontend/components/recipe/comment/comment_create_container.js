@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   action: (comment, recipeId) => {
-    return dispatch(createComment(comment, recipeId));
+    dispatch(createComment(comment, recipeId));
   }
 });
 

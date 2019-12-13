@@ -31,18 +31,24 @@ class CommentCreate extends React.Component{
         rating: this.state.rating,
         anonymous: this.state.anonymous
       },
-      this.props.recipeId)
-      // .then(
-      //   () => this.setState({
-      //     recipe_id: this.props.recipeId,
-      //     author_id: this.props.authorId,
-      //     again: true,
-      //     body: "",
-      //     rating: null,
-      //     anonymous: true
-      //   })
-      // );
-    // this.props.action(this.state,this.props.recipeId);
+      this.props.recipeId
+    );
+    // this.setState({
+    //   recipe_id: this.props.recipeId,
+    //   author_id: this.props.authorId,
+    //   again: true,
+    //   body: "",
+    //   rating: 0,
+    //   anonymous: true
+    // });
+    // this.update('recipe_id');
+    // this.update('again');
+    // this.update('body');
+    // this.updateBool('anonymous');
+    // this.handleStars;
+    this.setState({ body: "", rating: 0});
+    document.getElementById("comment-form").reset();
+    this.handleStars;
   }
 
   update(field) {
@@ -68,7 +74,7 @@ class CommentCreate extends React.Component{
   render(){
     return(
       <div>
-        <form onSubmit={this.handleSubmit} className="comment-form">
+        <form onSubmit={this.handleSubmit} className="comment-form" id="comment-form">
           <div className="comment-form-item">
             <label>
               <p className="again-question">
