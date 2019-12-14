@@ -27,7 +27,7 @@ class Recipe < ApplicationRecord
     self.comments.each do |comment|
       if comment.rating
         total += comment.rating
-        num_ratings += 1
+        num_ratings += 1.0
       end
     end
     total / num_ratings

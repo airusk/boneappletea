@@ -9,15 +9,39 @@ class RecipeShow extends React.Component{
 
   constructor(props){
     super(props);
+    this.drawRecipeRating = this.drawRecipeRating.bind(this);
   }
 
   componentDidMount(){
     this.props.fetchRecipe(this.props.match.params.recipeId);
     window.scrollTo(0, 0);
+    this.drawRecipeRating
   }
   componentDidUpdate(prevProps){
     if(prevProps.match.params.recipeId !== this.props.match.params.recipeId){
       this.props.fetchRecipe(this.props.match.params.recipeId);
+    }
+  }
+  drawRecipeRating(){
+    const recipeRating = document.getElementsByClassName("recipe-rating-stars")[0];
+    let i = 0;
+    while (i < Math.floor(recipe.rating)) {
+      const star = document.createElement("img");
+      star.src = window.starFillURL;
+      recipeRating.append(star);
+      i++;
+    }
+    if (recipe.rating % .5 > .25) {
+      const star = document.createElement("img");
+      star.src = window.starHalfFillURL;
+      recipeRating.append(star);
+      i++;
+    }
+    while (i !== 5) {
+      const star = document.createElement("img");
+      star.src = window.starNoFillURL;
+      recipeRating.append(star);
+      i++;
     }
   }
 
@@ -34,7 +58,8 @@ class RecipeShow extends React.Component{
               <p> Author ID: {recipe.userId}</p>
             </div> */}
             <div className="rating subheading">
-              No Ratings Yet
+              {recipe.rating}
+              <div className="recipe-rating-stars"></div>
             </div>
           </div>
           <div className="main-image">

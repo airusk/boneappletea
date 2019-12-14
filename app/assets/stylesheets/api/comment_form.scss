@@ -9,6 +9,10 @@
 
 .comment-form-item{
   margin-bottom: 21px;
+  display: block;
+  &.hidden{
+    display: none;
+  }
 }
 
 .again-question{
@@ -20,7 +24,6 @@
   line-height: 1.1;
   display: inline-block;
   height: 30px;
-  // padding-right: 21px;
   input[type=radio]{
     display: inline-block;
     cursor: pointer;
@@ -52,6 +55,15 @@
 
 .comment-text-form{
   width: 100%;
+  height: 135px;
+  padding: 15px;
+  border: 1px solid #000;
+  resize: none;
+  font-family: var(--heading-font);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75;
+  box-sizing: border-box;
 }
 
 .comment-form-buttons{

@@ -15,6 +15,7 @@
 
 class Comment < ApplicationRecord
   validate :content
+  validates :rating, inclusion: { in: [1,2,3,4,5] }
   validates :author_id, :recipe_id, presence: true
 
   belongs_to :recipe
@@ -35,9 +36,4 @@ class Comment < ApplicationRecord
   def author
     self.anonymous ? "Anonymous" : self.user.name
   end
-
-  def fix_rating
-    self.rating = nil if !(self.rating > 0 && self.rating < 5)
-  end
-
 end
