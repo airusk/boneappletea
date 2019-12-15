@@ -25,7 +25,7 @@
 
 .recipe-head-container .subheading{
   font-family: var(--heading-font);
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   font-size: 12pt;
   line-height: 1.5;
@@ -36,6 +36,24 @@
 
 .recipe-header{
   padding: 30px 0 30px;
+}
+
+.recipe-rating-stars{
+  line-height: 1.5;
+  vertical-align: top;    
+  .rating-count{
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: .8rem;
+  }
+  .recipe-star{
+    width: auto;
+    height: 14px;
+    margin: 0 7px 0 0;
+  }
 }
 
 @media screen and (min-width: 1024px){

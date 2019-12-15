@@ -13,9 +13,11 @@ class RecipeShow extends React.Component{
   }
 
   componentDidMount(){
-    this.props.fetchRecipe(this.props.match.params.recipeId);
+    this.props.fetchRecipe(this.props.match.params.recipeId)
+    .then(
+      () => this.drawRecipeRating()
+    );
     window.scrollTo(0, 0);
-    this.drawRecipeRating
   }
   componentDidUpdate(prevProps){
     if(prevProps.match.params.recipeId !== this.props.match.params.recipeId){
@@ -24,22 +26,30 @@ class RecipeShow extends React.Component{
   }
   drawRecipeRating(){
     const recipeRating = document.getElementsByClassName("recipe-rating-stars")[0];
+    const numericalRating = this.props.recipe.rating;
+    const ratingCount = document.createElement("span");
+    ratingCount.className = "rating-count";
+    ratingCount.innerHTML = `${this.props.recipe.numRatings} Ratings`;
+    recipeRating.appendChild(ratingCount);
     let i = 0;
-    while (i < Math.floor(recipe.rating)) {
+    while (i < Math.floor(numericalRating)) {
       const star = document.createElement("img");
       star.src = window.starFillURL;
+      star.className = "recipe-star";
       recipeRating.append(star);
       i++;
     }
-    if (recipe.rating % .5 > .25) {
+    if (numericalRating % 1 >= .25) {
       const star = document.createElement("img");
       star.src = window.starHalfFillURL;
+      star.className = "recipe-star";
       recipeRating.append(star);
       i++;
     }
     while (i !== 5) {
       const star = document.createElement("img");
       star.src = window.starNoFillURL;
+      star.className = "recipe-star";
       recipeRating.append(star);
       i++;
     }
@@ -58,7 +68,6 @@ class RecipeShow extends React.Component{
               <p> Author ID: {recipe.userId}</p>
             </div> */}
             <div className="rating subheading">
-              {recipe.rating}
               <div className="recipe-rating-stars"></div>
             </div>
           </div>

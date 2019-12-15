@@ -41,4 +41,8 @@ class Recipe < ApplicationRecord
     make_again / (self.comments.length) * 100
   end
 
+  def num_ratings
+    self.comments.count{ |comment| !!comment.rating }
+  end
+
 end
