@@ -28,30 +28,36 @@ class RecipeShow extends React.Component{
     const recipeRating = document.getElementsByClassName("recipe-rating-stars")[0];
     const numericalRating = this.props.recipe.rating;
     const ratingCount = document.createElement("span");
+    recipeRating.append(ratingCount);
     ratingCount.className = "rating-count";
-    ratingCount.innerHTML = `${this.props.recipe.numRatings} Ratings`;
-    recipeRating.appendChild(ratingCount);
     let i = 0;
-    while (i < Math.floor(numericalRating)) {
-      const star = document.createElement("img");
-      star.src = window.starFillURL;
-      star.className = "recipe-star";
-      recipeRating.append(star);
-      i++;
-    }
-    if (numericalRating % 1 >= .25) {
-      const star = document.createElement("img");
-      star.src = window.starHalfFillURL;
-      star.className = "recipe-star";
-      recipeRating.append(star);
-      i++;
-    }
-    while (i !== 5) {
-      const star = document.createElement("img");
-      star.src = window.starNoFillURL;
-      star.className = "recipe-star";
-      recipeRating.append(star);
-      i++;
+    if (numericalRating){
+      const numRatings = this.props.recipe.numRatings
+      const singular = (numRatings === 1) ? "Rating" : "Ratings"
+      ratingCount.innerHTML = `${numRatings} ${singular}`;
+      while (i < Math.floor(numericalRating)) {
+        const star = document.createElement("img");
+        star.src = window.starFillURL;
+        star.className = "recipe-star";
+        recipeRating.append(star);
+        i++;
+      }
+      if (numericalRating % 1 >= .25) {
+        const star = document.createElement("img");
+        star.src = window.starHalfFillURL;
+        star.className = "recipe-star";
+        recipeRating.append(star);
+        i++;
+      }
+      while (i !== 5) {
+        const star = document.createElement("img");
+        star.src = window.starNoFillURL;
+        star.className = "recipe-star";
+        recipeRating.append(star);
+        i++;
+      }
+    }else{
+      ratingCount.innerHTML = "No Ratings Yet";
     }
   }
 

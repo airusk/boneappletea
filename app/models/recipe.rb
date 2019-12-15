@@ -30,7 +30,7 @@ class Recipe < ApplicationRecord
         num_ratings += 1.0
       end
     end
-    total / num_ratings
+    return (num_ratings > 0) ? total / num_ratings : nil
   end
 
   def again
