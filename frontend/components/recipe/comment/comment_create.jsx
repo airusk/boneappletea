@@ -68,9 +68,13 @@ class CommentCreate extends React.Component{
   }
 
   expandForm(e){
-    const formItems = Array.from(document.getElementsByClassName("comment-form-item"));
-    for (let formItem of formItems){
-      formItem.classList.remove("hidden");
+    if (this.props.authorId){
+      const formItems = Array.from(document.getElementsByClassName("comment-form-item"));
+      for (let formItem of formItems){
+        formItem.classList.remove("hidden");
+      }
+    }else{
+      this.props.openModal('login');
     }
   }
 
