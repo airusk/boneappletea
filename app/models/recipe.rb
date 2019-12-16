@@ -18,7 +18,10 @@ class Recipe < ApplicationRecord
   has_many :steps
   has_one_attached :image
   has_many :comments
+  has_many :taggings
 
+  has_many :tags,
+    through: :taggings
 
   def rating
     # Method to create recipe rating through comment ratings.

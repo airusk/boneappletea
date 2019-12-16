@@ -15,7 +15,7 @@
 
 class Comment < ApplicationRecord
   validate :content
-  validates :rating, inclusion: { in: [1,2,3,4,5] }
+  validates :rating, inclusion: { in: [1,2,3,4,5,nil] }
   validates :author_id, :recipe_id, presence: true
 
   belongs_to :recipe

@@ -11,6 +11,8 @@ User.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
 Step.destroy_all
+Tag.destroy_all
+Taggings.destroy_all
 
 #USER SEEDS
 User.create(name: "Pizza Lover", email: "pizzalover@bat.com", password: "pepperoni")
@@ -979,3 +981,99 @@ Step.create(
 )
 # file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/6/blackberry-icebox-cake-12.mp4.webm')
 # Step.last.image.attach(io: file, filename: 'blackberry-icebox-cake-12.mp4.webm')
+###
+#
+#
+#
+# TAGS SEEDS
+#
+#
+#
+###
+Tag.create(name: chicken)
+Tag.create(name: garlic)
+Tag.create(name: potato)
+Tag.create(name: scallion)
+Tag.create(name: lime)
+Tag.create(name: shrimp)
+Tag.create(name: spinach)
+Tag.create(name: egg)
+###
+#
+#
+#
+# TAGGINGS SEEDS
+#
+#
+#
+###
+# RECIPE 1 TAGS
+Tagging.create(
+  recipe_id:1,
+  tag_id: 1
+)
+Tagging.create(
+  recipe_id:1,
+  tag_id: 2
+)
+Tagging.create(
+  recipe_id:1,
+  tag_id: 3
+)
+Tagging.create(
+  recipe_id:1,
+  tag_id: 4
+)
+Tagging.create(
+  recipe_id:1,
+  tag_id: 5
+)
+# RECIPE 2 TAGS
+Tagging.create(
+  recipe_id:2,
+  tag_id: 4
+)
+Tagging.create(
+  recipe_id:2,
+  tag_id: 6
+)
+Tagging.create(
+  recipe_id:2,
+  tag_id: 7
+)
+Tagging.create(
+  recipe_id:2,
+  tag_id: 8
+)
+# RECIPE 3 TAGS
+Tagging.create(
+  recipe_id:3,
+  tag_id: 8
+)
+# RECIPE 4 TAGS
+Tagging.create(
+  recipe_id:4,
+  tag_id: 2
+)
+Tagging.create(
+  recipe_id:4,
+  tag_id: 5
+  )
+# RECIPE 5 TAGS
+Tagging.create(
+  recipe_id:5,
+  tag_id: 2
+)
+Tagging.create(
+  recipe_id:5,
+  tag_id: 5
+)
+Tagging.create(
+  recipe_id:5,
+  tag_id: 8
+)
+# RECIPE 6 TAGS
+Tagging.create(
+  recipe_id:6,
+  tag_id: 5
+)
