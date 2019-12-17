@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import StarRating from './star_rating';
 
 const RecipeIndexItem = props => (
   <li className="recipe-card">
@@ -18,6 +19,7 @@ const RecipeIndexItem = props => (
           <div className="button-border">
           </div>
       </Link>
+      {/* <StarRating rating={props.recipe.rating}/> */}
     </div>
   </li>
 );

@@ -57,7 +57,7 @@ class RecipeShow extends React.Component{
         i++;
       }
     }else{
-      ratingCount.innerHTML = "No Ratings Yet";
+      ratingCount.innerHTML = "";
     }
   }
 
