@@ -11,3 +11,10 @@ export const fetchRecipe = recipeId => (
     method: 'GET'
   })
 );
+
+export const fetchSearch = tag => (
+  $.ajax({
+    url: `api/search?tag=${tag}`,
+    method: 'GET'
+  })
+);

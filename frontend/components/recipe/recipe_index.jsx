@@ -4,11 +4,23 @@ import RecipeIndexItem from './recipe_index_item';
 class RecipeIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      search: ""
+    }
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  
+
   componentDidMount(){
     this.props.fetchRecipes();
     window.scrollTo(0, 0);
+  }
+
+  handleSubmit(e){
+    this.props.fetchSearch(this.state.search);
+  }
+
+  update(field) {
+    return e => this.setState({ [field]: e.currentTarget.value })
   }
   
   render() {
@@ -20,8 +32,15 @@ class RecipeIndex extends React.Component {
             Recipes
           </h1>
           <div className="searchbar-wrapper">
-            <form className="search-form">
-              <input type="search" className="recipe-index-searchbar" placeholder="Find a Recipe" autoComplete="off"/>
+            <form className="search-form" onSubmit={this.handleSubmit}>
+              <input 
+                type="search" 
+                className="recipe-index-searchbar" 
+                placeholder="Find a Recipe" 
+                autoComplete="off" 
+                onChange={this.update('search')}
+                value={this.state.search}
+              />
               <input type="submit" className="search-submit" value=""/>
             </form>
           </div>

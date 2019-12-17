@@ -20,7 +20,7 @@ const App = () => (
       <Route exact path="/recipes/:recipeId" component={RecipeShowContainer}/> 
       <Route exact path="/recipes/" component={RecipeIndexContainer}/> 
       <Route exact path="/" component={HomepageContainer} />
-      <Redirect to="/recipes/"/>
+      {/* <Redirect to="/recipes/"/> */}
     </Switch>
     <footer>
     <FooterContainer/>

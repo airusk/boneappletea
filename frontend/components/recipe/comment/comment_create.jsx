@@ -202,7 +202,7 @@ class CommentCreate extends React.Component{
           </div>
           <div className="comment-form-item hidden">
             <div className="comment-form-buttons">
-              <button className="cancel-button" type="button">Cancel</button>
+              <button className="cancel-button" type="button" onClick={this.collapseForm}>Cancel </button>
               <button className="save-button" type="submit">Save</button>
             </div>
           </div>

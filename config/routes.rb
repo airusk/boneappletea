@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :recipes, only: [:index, :show] do
       resources :comments, only: [:create]
     end
-    #nest comments under recipes
+    get :search, controller: :recipes 
     resources :ingredients, only: [:index]
     resources :steps, only: [:index]
   end

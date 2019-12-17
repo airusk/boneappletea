@@ -19,7 +19,6 @@ class Recipe < ApplicationRecord
   has_one_attached :image
   has_many :comments
   has_many :taggings
-
   has_many :tags,
     through: :taggings
 
@@ -46,6 +45,21 @@ class Recipe < ApplicationRecord
 
   def num_ratings
     self.comments.count{ |comment| !!comment.rating }
+  end
+
+  def self.search(name)
+    if name
+      tag = Tag.find_by(name: name)
+      if tag
+        collection = Tagging.where(tag: tag)
+        recipe_ids = collection.map{|item| item["recipe_id"]}
+        Recipe.where(id: recipe_ids)
+      else
+        Recipe.all
+      end
+    else
+      Recipe.all
+    end
   end
 
 end
