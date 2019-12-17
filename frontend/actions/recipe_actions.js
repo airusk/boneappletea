@@ -30,7 +30,6 @@ export const fetchRecipe = recipeId => dispatch => {
 };
 
 export const fetchSearch = tag => dispatch => {
-  debugger
   return RecipeApiUtil.fetchSearch(tag)
     .then(payload => dispatch(receiveSearch(payload)));
 };

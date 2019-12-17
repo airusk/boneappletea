@@ -1,5 +1,6 @@
 import React from 'react';
 import RecipeIndexItem from './recipe_index_item';
+import { withRouter } from 'react-router-dom';
 
 class RecipeIndex extends React.Component {
   constructor(props) {
@@ -16,6 +17,8 @@ class RecipeIndex extends React.Component {
   }
 
   handleSubmit(e){
+    const { history } = this.props;
+    history.push(`/search/?tag=${this.state.search}`);
     this.props.fetchSearch(this.state.search);
   }
 
@@ -70,4 +73,4 @@ RecipeIndex.defaultProps= {
   }
 }
 
-export default RecipeIndex;
+export default withRouter(RecipeIndex);
