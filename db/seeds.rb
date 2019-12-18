@@ -11,6 +11,7 @@ User.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
 Step.destroy_all
+Comment.destroy_all
 Tag.destroy_all
 Tagging.destroy_all
 
