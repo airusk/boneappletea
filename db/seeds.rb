@@ -15,6 +15,150 @@ Comment.destroy_all
 Tag.destroy_all
 Tagging.destroy_all
 
+###
+#
+#
+#
+# TAGS SEEDS
+#
+#
+#
+###
+Tag.create(name: "chicken")   #01
+Tag.create(name: "garlic")
+Tag.create(name: "potato")
+Tag.create(name: "scallion")
+Tag.create(name: "lime")      #05
+Tag.create(name: "shrimp")
+Tag.create(name: "spinach")
+Tag.create(name: "egg")
+Tag.create(name: "noodle")
+Tag.create(name: "butter")    #10
+Tag.create(name: "apple")
+Tag.create(name: "fish")
+Tag.create(name: "cilantro")
+Tag.create(name: "tomato")
+Tag.create(name: "cabbage")   #15
+Tag.create(name: "avocado")
+Tag.create(name: "tortilla")
+Tag.create(name: "beef")
+Tag.create(name: "parsley")
+Tag.create(name: "blackberry")
+###
+#
+#
+#
+# TAGGINGS SEEDS
+#
+#
+#
+###
+# RECIPE 1 TAGS
+Tagging.create(
+  recipe_id:1,
+  tag_id: 1
+)
+Tagging.create(
+  recipe_id:1,
+  tag_id: 2
+)
+Tagging.create(
+  recipe_id:1,
+  tag_id: 3
+)
+Tagging.create(
+  recipe_id:1,
+  tag_id: 4
+)
+Tagging.create(
+  recipe_id:1,
+  tag_id: 5
+)
+# RECIPE 2 TAGS
+Tagging.create(
+  recipe_id: 2,
+  tag_id: 4
+)
+Tagging.create(
+  recipe_id: 2,
+  tag_id: 6
+)
+Tagging.create(
+  recipe_id: 2,
+  tag_id: 7
+)
+Tagging.create(
+  recipe_id: 2,
+  tag_id: 8
+)
+Tagging.create(
+  recipe_id: 2,
+  tag_id: 9
+)
+# RECIPE 3 TAGS
+Tagging.create(
+  recipe_id: 3,
+  tag_id: 8
+)
+Tagging.create(
+  recipe_id: 3,
+  tag_id: 10
+)
+Tagging.create(
+  recipe_id: 3,
+  tag_id: 11
+)
+# RECIPE 4 TAGS
+Tagging.create(
+  recipe_id: 4,
+  tag_id: 2
+)
+Tagging.create(
+  recipe_id: 4,
+  tag_id: 5
+)
+Tagging.create(
+  recipe_id: 4,
+  tag_id: 12
+)
+Tagging.create(
+  recipe_id: 4,
+  tag_id: 13
+)
+Tagging.create(
+  recipe_id: 4,
+  tag_id: 14
+)
+Tagging.create(
+  recipe_id: 4,
+  tag_id: 15
+)
+# RECIPE 5 TAGS
+Tagging.create(
+  recipe_id: 5,
+  tag_id: 2
+)
+Tagging.create(
+  recipe_id: 5,
+  tag_id: 5
+)
+Tagging.create(
+  recipe_id: 5,
+  tag_id: 8
+)
+Tagging.create(
+  recipe_id: 5,
+  tag_id: 18
+)
+Tagging.create(
+  recipe_id: 5,
+  tag_id: 19
+)
+# RECIPE 6 TAGS
+Tagging.create(
+  recipe_id: 6,
+  tag_id: 20
+)
 #USER SEEDS
 User.create(name: "Pizza Lover", email: "pizzalover@bat.com", password: "pepperoni")
 User.create(name: "Stephen Gee Lee", email: "nonuts@painterest.com", password: "raveking")
@@ -1281,148 +1425,4 @@ Comment.create(
   author_id: 3,
   again: true,
   anonymous: false
-)
-###
-#
-#
-#
-# TAGS SEEDS
-#
-#
-#
-###
-Tag.create(name: "chicken")   #01
-Tag.create(name: "garlic")
-Tag.create(name: "potato")
-Tag.create(name: "scallion")
-Tag.create(name: "lime")      #05
-Tag.create(name: "shrimp")
-Tag.create(name: "spinach")
-Tag.create(name: "egg")
-Tag.create(name: "noodle")
-Tag.create(name: "butter")    #10
-Tag.create(name: "apple")
-Tag.create(name: "fish")
-Tag.create(name: "cilantro")
-Tag.create(name: "tomato")
-Tag.create(name: "cabbage")   #15
-Tag.create(name: "avocado")
-Tag.create(name: "tortilla")
-Tag.create(name: "beef")
-Tag.create(name: "parsley")
-Tag.create(name: "blackberry")
-###
-#
-#
-#
-# TAGGINGS SEEDS
-#
-#
-#
-###
-# RECIPE 1 TAGS
-Tagging.create(
-  recipe_id:1,
-  tag_id: 1
-)
-Tagging.create(
-  recipe_id:1,
-  tag_id: 2
-)
-Tagging.create(
-  recipe_id:1,
-  tag_id: 3
-)
-Tagging.create(
-  recipe_id:1,
-  tag_id: 4
-)
-Tagging.create(
-  recipe_id:1,
-  tag_id: 5
-)
-# RECIPE 2 TAGS
-Tagging.create(
-  recipe_id: 2,
-  tag_id: 4
-)
-Tagging.create(
-  recipe_id: 2,
-  tag_id: 6
-)
-Tagging.create(
-  recipe_id: 2,
-  tag_id: 7
-)
-Tagging.create(
-  recipe_id: 2,
-  tag_id: 8
-)
-Tagging.create(
-  recipe_id: 2,
-  tag_id: 9
-)
-# RECIPE 3 TAGS
-Tagging.create(
-  recipe_id: 3,
-  tag_id: 8
-)
-Tagging.create(
-  recipe_id: 3,
-  tag_id: 10
-)
-Tagging.create(
-  recipe_id: 3,
-  tag_id: 11
-)
-# RECIPE 4 TAGS
-Tagging.create(
-  recipe_id: 4,
-  tag_id: 2
-)
-Tagging.create(
-  recipe_id: 4,
-  tag_id: 5
-)
-Tagging.create(
-  recipe_id: 4,
-  tag_id: 12
-)
-Tagging.create(
-  recipe_id: 4,
-  tag_id: 13
-)
-Tagging.create(
-  recipe_id: 4,
-  tag_id: 14
-)
-Tagging.create(
-  recipe_id: 4,
-  tag_id: 15
-)
-# RECIPE 5 TAGS
-Tagging.create(
-  recipe_id: 5,
-  tag_id: 2
-)
-Tagging.create(
-  recipe_id: 5,
-  tag_id: 5
-)
-Tagging.create(
-  recipe_id: 5,
-  tag_id: 8
-)
-Tagging.create(
-  recipe_id: 5,
-  tag_id: 18
-)
-Tagging.create(
-  recipe_id: 5,
-  tag_id: 19
-)
-# RECIPE 6 TAGS
-Tagging.create(
-  recipe_id: 6,
-  tag_id: 20
 )
