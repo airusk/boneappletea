@@ -20,7 +20,7 @@ User.create(name: "Pizza Lover", email: "pizzalover@bat.com", password: "peppero
 User.create(name: "Stephen Gee Lee", email: "nonuts@painterest.com", password: "raveking")
 User.create(name: "Maximus Li", email: "nomin@wowelp.com", password: "onlymax")
 User.create(name: "Kim Pham", email: "Phamtastic@finalenix.com", password: "finalfantasy14")
-User.create(name: "Dani M.", email: "dm@dani.me", password: "password")
+User.create(name: "Dani Mall", email: "danimail@dani.com", password: "passwordsss")
 
 ###
 #
