@@ -173,9 +173,29 @@
     letter-spacing: 1.3px;
 } 
 
+.index-recipe-rating-stars{
+  margin-top: 20px;
+  line-height: 1.5;
+  vertical-align: top;
+  display: flex;
+  justify-content: space-around;
+  .rating-count{
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: .8rem;
+  }
+  .recipe-star{
+    width: auto;
+    height: 14px;
+    margin: 0 7px 0 0;
+  }
+}
+
 @media screen and (min-width:1024px){
   .recipe-card .card-title{
     font-size: 3rem;
   } 
 }
-

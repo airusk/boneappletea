@@ -19,7 +19,7 @@ const RecipeIndexItem = props => (
           <div className="button-border">
           </div>
       </Link>
-      {/* <StarRating rating={props.recipe.rating}/> */}
+    <StarRating rating={props.recipe.rating} numRatings={props.recipe.numRatings} id={props.recipe.id}/>
     </div>
   </li>
 );
