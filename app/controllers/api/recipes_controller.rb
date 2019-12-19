@@ -4,13 +4,11 @@ class Api::RecipesController < ApplicationController
   end
 
   def search
-    @recipes = Recipe.search(params[:tag])
-    # @recipes = Tagging.search(params[:tag])
-    # @recipes = Recipe.ransack(title_cont: params[:q]).result(distinct: true).limit(5)
+    @recipes = Recipe.with_attached_image.search(params[:tag])
   end
   
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.includes(:steps, :ingredients, :comments).find(params[:id])
   end
 
   def recipe_params

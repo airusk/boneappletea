@@ -74,7 +74,7 @@ class NavigationBar extends React.Component {
           </div>
           {recipeLink}
           <a 
-            href="https://www.linkedin.com/in/airusk/" 
+            href="https://www.linkedin.com/in/ksuriawijaya/" 
             target="_blank" className="subheading" 
             onClick={this.handleNavigate}>LinkedIn
           </a>
@@ -84,12 +84,17 @@ class NavigationBar extends React.Component {
             onClick={this.handleNavigate}>Github
           </a>
           <a 
-            href="mailto: nsuriawijaya@gmail.com" 
+            href="https://angel.co/ksuriawijaya" 
+            target="_blank" className="subheading" 
+            onClick={this.handleNavigate}>AngelList
+          </a>
+          <a 
+            href="mailto: ksuriawijaya@gmail.com" 
             target="_blank" className="subheading" 
             onClick={this.handleNavigate}>Email
           </a>
           <a 
-            href="https://airusk.carbonmade.com" 
+            href="https://angel.co/ksuriawijaya" 
             target="_blank" className="subheading" 
             onClick={this.handleNavigate}>Portfolio
           </a>

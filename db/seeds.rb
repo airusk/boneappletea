@@ -79,15 +79,6 @@ Recipe.create(
 )
 file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/6/blackberry-icebox-cake.jpg')
 Recipe.last.image.attach(io: file, filename: 'blackberry-icebox-cake.jpg')
-
-# Recipe.create(
-#   title: "totino's pizza rolls", 
-#   body: "Set it and forget it!", 
-#   user_id: 1
-# )
-# file = open('https://boneappletea-seed.s3-us-west-1.amazonaws.com/recipes/4/Totino_Pizza_Rolls_large.jpg')
-# Recipe.last.image.attach(io: file, filename: 'Totino_Pizza_Rolls_large.jpg')
-
 ###
 #
 #
