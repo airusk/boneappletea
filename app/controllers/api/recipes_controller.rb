@@ -1,10 +1,10 @@
 class Api::RecipesController < ApplicationController
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.with_attached_image.includes(:comments).all
   end
 
   def search
-    @recipes = Recipe.with_attached_image.search(params[:tag])
+    @recipes = Recipe.with_attached_image.includes(:comments).search(params[:tag])
   end
   
   def show
