@@ -50,6 +50,7 @@ class Recipe < ApplicationRecord
   def self.search(name)
     if name
       tag = Tag.where("lower(name) LIKE ?", "%" + name.downcase + "%" )
+      # recipes = Recipe.where("lower(name) LIKE ?", "%" + name.downcase + "%")
       if tag
         collection = Tagging.where(tag: tag)
         recipe_ids = collection.map{|item| item["recipe_id"]}
