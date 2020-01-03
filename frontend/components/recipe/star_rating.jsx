@@ -35,7 +35,8 @@ const StarRating = props => {
       emptyStar.className = "recipe-star";
       ratingStarsDiv.append(emptyStar);
     }
-  },() => {ratingStarsDiv.innerHTML = ""});
+    return () => { ratingStarsDiv.innerHTML = "" }
+  },[]);
 
   const ratingLiteral = (props.numRatings === 1) ? " Rating" : " Ratings";
   const ratingStars = (
