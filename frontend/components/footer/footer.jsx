@@ -36,6 +36,7 @@ const FooterContainer = () => (
       <p className="technology">HTML5</p>
       <p className="technology">CSS3</p>
       <p className="technology">PostgresSQL</p>
+      <p className="technology">AWS</p>
       <a className="technology about" href="https://github.com/airusk/boneappletea" target="_blank">
         About
       </a>

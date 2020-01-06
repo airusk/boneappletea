@@ -1290,7 +1290,7 @@ Tag.create(name: "lime")      #05
 Tag.create(name: "shrimp")
 Tag.create(name: "spinach")
 Tag.create(name: "egg")
-Tag.create(name: "noodle")
+Tag.create(name: "noodles")
 Tag.create(name: "butter")    #10
 Tag.create(name: "apple")
 Tag.create(name: "fish")
