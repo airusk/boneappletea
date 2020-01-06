@@ -21,15 +21,11 @@ Welcome to the boneappletea repo. boneappletea is a [bonappétit](https://www.bo
 
 ### Searching for Recipes
 
-All users can peruse recipes via featured ones on the splash page or through the index.
+All users can peruse recipes via featured ones on the splash page or through the index. From here we can search for recipes via recipe ingredients or the names of these dishes.
 
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/recipe_index.png" align ="center"><br>
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/search_query.gif" align="center"><br>
 
-From here we can search for recipes via recipe ingredients or the names of these dishes.
-
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/search_query.gif" align ="center"><br>
-
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/search_controller_action.png" align ="center"><br>
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/search_controller_action.png" width="750" align="center"><br>
 *API controller action to fetch recipes which pertain to *```:tag```*.*
 
 Recipes have ratings which are accessed via their association to comments which may/may not have a rating attached to them.
@@ -57,10 +53,9 @@ At the bottom of recipes is a review box where registered users can leave review
 
 ### User Authentication
 
-Users can sign up by clicking the SIGNUP button on the right of the navigation bar, or sign i n using the demo user function.
+Users can sign up by clicking the SIGNUP button on the right of the navigation bar, or sign in using the demo user function.
 
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/user_login.gif
-" align ="left">
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/user_login.gif" align ="left"><br>
 
 ## How to Run
 
