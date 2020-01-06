@@ -3,7 +3,7 @@
 
 Welcome to the boneappletea repo. boneappletea is a [bonappétit](https://www.bonappetit.com/) clone which allows users to browse, search, and review recipes.<br>
 
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/splash_page.png" align ="left">
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/splash_page.png" align ="center"><br>
 
 ## Technologies
 
@@ -23,18 +23,18 @@ Welcome to the boneappletea repo. boneappletea is a [bonappétit](https://www.bo
 
 All users can peruse recipes via featured ones on the splash page or through the index.
 
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/recipe_index.png" align ="left">
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/recipe_index.png" align ="center"><br>
 
 From here we can search for recipes via recipe ingredients or the names of these dishes.
 
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/search_query.gif" align ="left">
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/search_query.gif" align ="center"><br>
 
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/search_controller_action.png" align ="left">
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/search_controller_action.png" align ="center"><br>
 *API controller action to fetch recipes which pertain to *```:tag```*.*
 
 Recipes have ratings which are accessed via their association to comments which may/may not have a rating attached to them.
 
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/rating.gif" align ="left">
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/rating.gif" align ="left"><br>
 
 ### Recipes, Ingredients, and Steps
 
@@ -52,7 +52,7 @@ RECIPE SHOW GIF
 
 At the bottom of recipes is a review box where registered users can leave reviews on as well as other users' reviews.
 
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/leave_review.gif" align ="left">
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/leave_review.gif" align ="center"><br>
 
 
 ### User Authentication
