@@ -1,25 +1,32 @@
-# [<img src="https://github.com/airusk/boneappletea/blob/master/app/assets/images/src/logo2.png">](http://boneappletea.herokuapp.com/#/)
-# [Live Demo!](http://boneappletea.herokuapp.com/#/)
+# [<img src="https://github.com/airusk/boneappletea/blob/master/app/assets/images/src/logo2.png" align ="left" height="45">](http://boneappletea.herokuapp.com/#/)<br>
+## [Live Demo!](http://boneappletea.herokuapp.com/#/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the boneappletea repo. boneappletea is a [bonappétit](https://www.bonappetit.com/) clone which allows users to browse, search, and review recipes.<br>
 
-Things you may want to cover:
+SPLASH IMAGE
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/splash_page.png" align ="left">
 
-* Ruby version
+## Technologies
 
-* System dependencies
+* Ruby on Rails
+* React & Redux
+* Javascript
+* JQuery
+* PostgreSQL
+* HTML5
+* CSS3
+* Heroku
+* AWS
 
-* Configuration
+## Features
 
-* Database creation
+All users can peruse recipes via featured ones on the splash page or through the index.
 
-* Database initialization
+INDEX IMAGE
 
-* How to run the test suite
+From here we can search for recipes via recipe ingredients or the names of these dishes.
 
-* Services (job queues, cache servers, search engines, etc.)
+SEARCH GIF
 
-* Deployment instructions
 
-* ...
+
