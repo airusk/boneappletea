@@ -36,7 +36,7 @@ Recipes have ratings which are accessed via their association to comments which 
 
 Upon clicking a recipe, a payload organized by appropriate keys in our jbuilder files. This helps to reduces complexity and requires less logic in the frontend.
 
-
+STATE SHAPE IMAGE
 *recipe state shape in 'show.json.jbuilder'*
 
 This is the result of the payload being handed to our react components.
