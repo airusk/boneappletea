@@ -36,13 +36,11 @@ Recipes have ratings which are accessed via their association to comments which 
 
 Upon clicking a recipe, a payload organized by appropriate keys in our jbuilder files. This helps to reduces complexity and requires less logic in the frontend.
 
-STATE SHAPE IMAGE
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/state_shape.png" width="750" align="center"><br>
 *recipe state shape in 'show.json.jbuilder'*
 
-This is the result of the payload being handed to our react components.
-
-RECIPE SHOW GIF
-
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/recipe_show.gif" align="center"><br>
+*The result of the payload being handed to our react components in the frontend*
 
 ### Reviews
 
