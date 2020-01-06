@@ -30,7 +30,7 @@ All users can peruse recipes via featured ones on the splash page or through the
 
 Recipes have ratings which are accessed via their association to comments which may/may not have a rating attached to them.
 
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/rating.gif" align ="left"><br>
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/rating.gif" align ="center">
 
 ### Recipes, Ingredients, and Steps
 
@@ -55,7 +55,8 @@ At the bottom of recipes is a review box where registered users can leave review
 
 Users can sign up by clicking the SIGNUP button on the right of the navigation bar, or sign in using the demo user function.
 
-<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/user_login.gif" align ="left"><br>
+<img src="https://github.com/airusk/boneappletea/blob/master/readme_src/user_login.gif" align ="center">
+
 
 ## How to Run
 
