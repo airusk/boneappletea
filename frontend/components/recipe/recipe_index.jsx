@@ -18,7 +18,7 @@ class RecipeIndex extends React.Component {
 
   handleSubmit(e){
     const { history } = this.props;
-    history.push(`/search/?tag=${this.state.search}`);
+    // history.push(`/search/?tag=${this.state.search}`);
     this.props.fetchSearch(this.state.search);
   }
 
