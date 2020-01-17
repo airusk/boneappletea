@@ -42,9 +42,9 @@
 }
 
 .navigation-bar .link-sessions{
-  position: fixed;
+  position: absolute;
   top:0;
-  left: 87.5%;
+  right: 0;
   display: flex;
   justify-content: space-around;
   width: 150px;
