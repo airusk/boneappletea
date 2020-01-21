@@ -24,7 +24,7 @@ const FooterContainer = () => (
         <a href="mailto: ksuriawijaya@gmail.com" target="_blank">
           <EmailSVG width="30" className="credit-icon" />
         </a>
-        <a href="https://airusk.carbonmade.com" target="_blank">
+        <a href="https://kevinsuria.com" target="_blank">
           <PortfolioSVG width="30" className="portfolio" />
         </a>
       </div>
