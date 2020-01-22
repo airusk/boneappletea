@@ -94,7 +94,7 @@ class NavigationBar extends React.Component {
             onClick={this.handleNavigate}>Email
           </a>
           <a 
-            href="https://angel.co/ksuriawijaya" 
+            href="https://kevinsuria.com" 
             target="_blank" className="subheading" 
             onClick={this.handleNavigate}>Portfolio
           </a>
