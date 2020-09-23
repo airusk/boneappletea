@@ -2,12 +2,16 @@
 #
 # Table name: recipes
 #
-#  id         :integer          not null, primary key
-#  title      :string           not null
+#  id         :bigint           not null, primary key
 #  body       :string           not null
-#  user_id    :integer          not null
+#  title      :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  user_id    :integer          not null
+#
+# Indexes
+#
+#  index_recipes_on_user_id  (user_id)
 #
 
 class Recipe < ApplicationRecord
@@ -21,6 +25,7 @@ class Recipe < ApplicationRecord
   has_many :taggings
   has_many :tags,
     through: :taggings
+  has_many :bookmarks
 
   def rating
     # Method to create recipe rating through comment ratings.

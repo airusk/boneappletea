@@ -2,15 +2,20 @@
 #
 # Table name: comments
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
+#  again      :boolean          default(TRUE)
+#  anonymous  :boolean          default(TRUE)
 #  body       :string
-#  recipe_id  :integer          not null
-#  author_id  :integer          not null
+#  rating     :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  again      :boolean          default("true")
-#  rating     :integer
-#  anonymous  :boolean          default("true")
+#  author_id  :integer          not null
+#  recipe_id  :integer          not null
+#
+# Indexes
+#
+#  index_comments_on_author_id  (author_id)
+#  index_comments_on_recipe_id  (recipe_id)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
