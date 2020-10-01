@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :recipes, only: [:index, :show] do
       resources :comments, only: [:create]
-      resources :bookamrks, only: [:create, :destroy]
+      resources :bookmarks, only: [:create, :destroy]
     end
     get :search, controller: :recipes 
     resources :ingredients, only: [:index]

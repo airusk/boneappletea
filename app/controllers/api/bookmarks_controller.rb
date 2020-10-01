@@ -3,6 +3,7 @@ class Api::BookmarksController < ApplicationController
 
   def create
     @bookmark = Bookmark.new(bookmark_params)
+    @bookmark.user_id = current_user.id
     #insert name here if db changes @bookmark.name = recipe.id
     if @bookmark.save
       render :show
